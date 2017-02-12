@@ -25,7 +25,7 @@ digraph G {
 	TS	->	BST			[ color="black:black:black" ]
 	NVT	->	NT			[  ]
 	TF	->	GFE			[ constraint=false color=red ]
-	T8	->	SSS 		[ color="black:black:black" ]
+	T8	->	SSS			[ color="black:black:black" ]
 
 	/* Week 3 */
 	BST	->	NT			[ color="black:black:black" ]
