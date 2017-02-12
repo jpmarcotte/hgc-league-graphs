@@ -1,0 +1,35 @@
+digraph G {
+	node [color="white"];
+	imagepath="images/";
+	L5	[label="L5"]
+	MVB	[label="MVP\nBlack"]
+	TMP	[label="Tempest"]
+	MTY	[label="Mighty"]
+	GG	[label="GG"]
+	MVM	[label="MVP Miracle"]
+	SM	[label="Supreme Mixtape"]
+	RAV	[label="Raven"]
+
+	/* Week 1 */
+	L5	->	SM		[color="black:black:black"]
+	MTY	->	MVM		[  ]
+	MVB	->	TMP		[color="black:black"]
+	MVB	->	RAV		[color="black:black:black"]
+	TMP	->	GG		[color="black:black:black"]
+	L5	->	MTY		[color="black:black:black"]
+	MTY	->	GG		[  ]
+	L5	->	RAV		[color="black:black:black"]
+	MVM	->	SM		[  ]
+
+	/* Week 2 */
+	TMP	->	MVM		[color="black:black"]
+	MVB	->	SM		[color="black:black:black"]
+	GG	->	RAV		[color="black:black:black"]
+	MTY	->	RAV		[color="black:black:black"]
+	L5	->	MVM		[color="black:black"]
+	TMP	->	SM		[color="black:black:black"]
+	TMP	->	MTY		[  ]
+	L5	->	GG		[color="black:black:black"]
+	MVB	->	MVM		[color="black:black"]
+	
+}
