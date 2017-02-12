@@ -1,0 +1,45 @@
+digraph G {
+	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	imagepath="images/";
+	T8	[image="team-8.png"];
+	TS	[image="tempo-storm.png" style=filled fillcolor=blue];
+	NVT	[image="naventic.png"];
+	BST	[image="b-step.png"];
+	GFE	[image="gale-force-esports.png"];
+	NT	[image="no-tomorrow.png"];
+	SSS	[image="superstars.png"];
+	TF	[image="team-freedom.png"];
+
+	/* WIN -> LOSS; */	/* Match Score */
+	/* Week 1 */
+	TS	->	NVT			[ ]
+	T8	->	NT			[ color="black:black:black" ]
+	SSS	->	TF			[ color="black:black" ]
+	GFE	->	BST			[  ]
+	T8	->	BST			[ color="black:black" ]
+	GFE	->	NVT			[ color="black:black:black" ]
+
+	/* Week 2 */
+	TS	->	TF			[  ]
+	SSS	->	NT			[ color="black:black" ]
+	TS	->	BST			[ color="black:black:black" ]
+	NVT	->	NT			[  ]
+	TF	->	GFE			[ constraint=false color=red ]
+	T8	->	SSS 		[ color="black:black:black" ]
+
+	/* Week 3 */
+	BST	->	NT			[ color="black:black:black" ]
+	GFE	->	SSS			[ color="black:black:black" ]
+	TF	->	NVT			[ color="black:black" ]
+	TS	->	T8			[  ]
+	T8	->	GFE			[  ]
+	BST	->	TF			[ color="black:black" ]
+
+	/* Week 4 */
+	TS	->	NT			[ color="black:black:black" ]
+	SSS	->	NVT			[ color="black:black:black" ]
+	BST	->	SSS			[  ]
+	T8	->	NVT			[ color="black:black:black" ]
+	TS	->	GFE			[ style=dashed dir=none constraint=false ]
+	TF	->	NT			[ style=dashed dir=none constraint=false ]
+}

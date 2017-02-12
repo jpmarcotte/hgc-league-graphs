@@ -1,0 +1,44 @@
+digraph G {
+	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	imagepath="images/";
+	MSF	[image="misfits.png"];
+	FNC [image="fnatic.png"];
+	DIG [image="dignitas.png"];
+	EXP [image="expert.png"];
+	PD	[image="playing-ducks.png"];
+	BEG	[image="begenius.png"];
+	SNG	[image="team-synergy.png"];
+	TRC [image="tricked.png"];
+
+	/* Week 1 */
+	MSF	->	DIG		[ color="black:black:black" ]
+	EXP ->	PD		[ color="black:black:black" ]
+	SNG	->	BEG		[ color="black:black" ]
+	FNC	->	TRC		[ color="black:black" ]
+	EXP	->	TRC		[ color="black:black:black" ]
+	MSF	->	FNC		[  ]
+
+	/* Week 2 */
+	DIG	->	SNG		[ color="black:black:black" ]
+	PD	->	BEG		[ color="black:black" ]
+	DIG	->	TRC		[ color="black:black:black" ]
+	MSF	->	PD		[ color="black:black" ]
+	FNC	->	SNG		[ color="black:black:black" ]
+	EXP	->	BEG		[ color="black:black:black" ]
+
+	/* Week 3 */
+	PD	->	TRC		[  ]
+	FNC	->	BEG		[ color="black:black:black" ]
+	MSF	->	SNG		[ color="black:black:black" ]
+	DIG	->	EXP		[ color="black:black" ]
+	FNC	->	EXP		[  ]
+	TRC	->	SNG		[ color="black:black" ]
+
+	/* Week 4 */
+	DIG	->	PD		[ color="black:black" ]
+	MSF	->	BEG		[ color="black:black:black" ]
+	TRC	->	BEG		[ color="black:black:black" ]
+	MSF	->	EXP		[ color="black:black:black" ]
+	FNC	->	DIG		[ style=dashed dir=none constraint=false ]
+	SNG	->	PD		[ style=dashed dir=none constraint=false ]
+}
