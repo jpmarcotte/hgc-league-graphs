@@ -2,9 +2,9 @@ digraph G {
 	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
 	imagepath="images/";
 	MSF	[image="misfits.png"];
-	FNC [image="fnatic.png"];
-	DIG [image="dignitas.png"];
-	EXP [image="expert.png"];
+	FNC	[image="fnatic.png"];
+	DIG	[image="dignitas.png"];
+	EXP	[image="expert.png"];
 	PD	[image="playing-ducks.png"];
 	BEG	[image="begenius.png"];
 	SNG	[image="team-synergy.png"];
@@ -12,7 +12,7 @@ digraph G {
 
 	/* Week 1 */
 	MSF	->	DIG		[ color="black:black:black" ]
-	EXP ->	PD		[ color="black:black:black" ]
+	EXP	->	PD		[ color="black:black:black" ]
 	SNG	->	BEG		[ color="black:black" ]
 	FNC	->	TRC		[ color="black:black" ]
 	EXP	->	TRC		[ color="black:black:black" ]
