@@ -10,7 +10,6 @@ digraph G {
 	SSS	[image="superstars.png"];
 	TF	[image="team-freedom.png"];
 
-	/* WIN -> LOSS; */	/* Match Score */
 	/* Week 1 */
 	TS	->	NVT			[ ]
 	T8	->	NT			[ color="black:black:black" ]
