@@ -31,5 +31,20 @@ digraph KR {
 	TMP	->	MTY		[ color="black" ]
 	L5	->	GG		[ color="black:black:black" ]
 	MVB	->	MVM		[ color="black:black" ]
-	
+
+	/* Week 3 */
+	edge [ style=dashed dir=none constraint=false ]
+	RAV	->	SM		[  ]
+	GG	->	MVB		[  ]
+	L5	->	TMP		[  ]
+	MVB	->	MTY		[  ]
+	SM	->	GG		[  ]
+	RAV	->	MVM		[  ]
+
+	/* Week 4 */
+	edge [ color="gray" ]
+	L5	->	MVB		[  ]
+	RAV	->	TMP		[  ]
+	MVM	->	GG		[  ]
+	MTY	->	SM		[  ]
 }

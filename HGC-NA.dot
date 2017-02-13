@@ -30,8 +30,8 @@ digraph NA {
 	BST	->	NT			[ color="black:black:black" ]
 	GFE	->	SSS			[ color="black:black:black" ]
 	TF	->	NVT			[ color="black:black" ]
-	TS	->	T8			[ color="black" ]
-	T8	->	GFE			[ color="black" ]
+	TS	->	T8			[ /*color="black"*/ color=red constraint=false ]
+	T8	->	GFE			[ color="black" /*color=red constraint=false*/ ]
 	BST	->	TF			[ color="black:black" ]
 
 	/* Week 4 */
@@ -39,6 +39,16 @@ digraph NA {
 	SSS	->	NVT			[ color="black:black:black" ]
 	BST	->	SSS			[ color="black" ]
 	T8	->	NVT			[ color="black:black:black" ]
-	TS	->	GFE			[ style=dashed dir=none constraint=false ]
-	TF	->	NT			[ style=dashed dir=none constraint=false ]
+	GFE	->	TS			[ color="black:black:black" ]
+	edge [ style=dashed dir=none constraint=false ]
+	TF	->	NT			[  ]
+
+	edge [ color="gray" ]
+	/* Week 5 */
+	GFE	->	NT			[  ]
+	BST	->	NVT			[  ]
+	TS	->	SSS			[  ]
+	T8	->	TF			[  ]
+	
 }
+
