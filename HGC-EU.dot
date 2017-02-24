@@ -43,10 +43,8 @@ digraph EU {
 	PD	->	SNG		[ color="black" ]
 
 	/* Week 5 */
-	edge [ dir=none style=dashed constraint=false ]
-	FNC	->	PD		[  ]
-	MSF	->	TRC		[  ]
-	DIG	->	BEG		[  ]
-	EXP	->	SNG		[  ]
-	
+	FNC	->	PD		[ color="black:black" ]
+	MSF	->	TRC		[ color="black" ]
+	DIG	->	BEG		[ color="black:black:black" ]
+	EXP	->	SNG		[ color="black:black:black" ]
 }

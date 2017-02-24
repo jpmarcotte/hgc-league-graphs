@@ -42,12 +42,10 @@ digraph NA {
 	GFE	->	TS			[ color="black:black:black" ]
 	NT	->	TF			[ color="black:black" ]
 
-	edge [ style=dashed dir=none constraint=false ]
 	/* Week 5 */
-	GFE	->	NT			[  ]
-	BST	->	NVT			[  ]
-	TS	->	SSS			[  ]
-	T8	->	TF			[  ]
+	GFE	->	NT			[ color="black:black:black" ]
+	BST	->	NVT			[ color="black" ]
+	TS	->	SSS			[ color="black:black:black"  ]
+	T8	->	TF			[ color="black:black:black" ]
 	
 }
-
