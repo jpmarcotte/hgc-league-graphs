@@ -1,5 +1,5 @@
 #!/bin/bash
 for f in *.dot
 do
-	dot -Tpdf "$f" -o "${f%.dot}.pdf"
+	dot -Tpng "$f" -o "${f%.dot}.png"
 done
