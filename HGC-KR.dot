@@ -42,9 +42,8 @@ digraph KR {
 	MVPM	->	RVN		[ color="black" ]
 
 	/* Week 4 */
-	edge [ style=dashed dir=none constraint=false ]
-	L5	->	MVPB		[  ]
-	RVN	->	TP		[  ]
-	MVPM	->	GG		[  ]
-	MTY	->	BLS		[  ]
+	L5	->	MVPB		[ color="black:black:black" ]
+	TP	->	RVN		[ color="black:black:black" ]
+	GG	->	MVPM		[ color="black" ]
+	MTY	->	BLS		[ color="black" ]
 }
