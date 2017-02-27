@@ -1,7 +1,7 @@
 // vim: set ts=5 sw=5:
 digraph KR {
 	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
-	imagepath="images/";
+	imagepath="logos/";
 	L5	[ image="l5.png" ]
 	MVPB	[ image="mvp-black.png" ]
 	TP	[ image="tempest.png" ]

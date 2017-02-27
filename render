@@ -1,0 +1,5 @@
+#!/bin/bash
+for f in graphs/*.dot
+do
+	dot -Tpng "$f" -o "renders/${f%.dot}.png"
+done

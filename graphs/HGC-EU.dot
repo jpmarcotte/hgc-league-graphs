@@ -1,6 +1,6 @@
 digraph EU {
 	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
-	imagepath="images/";
+	imagepath="logos/";
 	MSF	[image="misfits.png"];
 	FNC	[image="fnatic.png"];
 	DIG	[image="dignitas.png"];
