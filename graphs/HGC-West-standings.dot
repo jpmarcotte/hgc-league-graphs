@@ -104,4 +104,11 @@ digraph West {
 		EXP	->	SNG		[ color="black:black:black" ]
 		
 	}
+
+	/* Western Clash */
+	edge [ color=gray style=dashed constraint=false dir=none ]
+	MSF	->	NOM	[  ]
+	T8	->	DIG	[  ]
+	TS	->	INF	[  ]
+	FNC	->	GFE	[  ]
 }
