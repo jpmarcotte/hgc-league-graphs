@@ -1,0 +1,107 @@
+digraph West {
+	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	imagepath="logos/";
+
+	NOM	[image="nomia.png"]
+	INF	[image="infamous.png"]
+
+	subgraph NA {
+		T8	[image="team-8.png"];
+		TS	[image="tempo-storm.png" style=filled fillcolor=blue];
+		NVT	[image="naventic.png"];
+		BST	[image="b-step.png"];
+		GFE	[image="gale-force-esports.png"];
+		NT	[image="no-tomorrow.png"];
+		SSS	[image="superstars.png"];
+		TF	[image="team-freedom.png"];
+
+		/* Week 1 */
+		TS	->	NVT			[ color="black" ]
+		T8	->	NT			[ color="black:black:black" ]
+		SSS	->	TF			[ color="black:black" ]
+		GFE	->	BST			[ color="black" ]
+		T8	->	BST			[ color="black:black" ]
+		GFE	->	NVT			[ color="black:black:black" ]
+
+		/* Week 2 */
+		TS	->	TF			[ color="black" ]
+		SSS	->	NT			[ color="black:black" ]
+		TS	->	BST			[ color="black:black:black" ]
+		NVT	->	NT			[ color="black" /*constraint=false color=red*/ ]
+		TF	->	GFE			[ constraint=false color=red ]
+		T8	->	SSS			[ color="black:black:black" ]
+
+		/* Week 3 */
+		BST	->	NT			[ color="black:black:black" ]
+		GFE	->	SSS			[ color="black:black:black" ]
+		TF	->	NVT			[ color="black:black" ]
+		TS	->	T8			[ color="black" /*color=red constraint=false*/ ]
+		T8	->	GFE			[ color="black" /*color=red constraint=false*/ ]
+		BST	->	TF			[ color="black:black" ]
+
+		/* Week 4 */
+		TS	->	NT			[ color="black:black:black" ]
+		SSS	->	NVT			[ color="black:black:black" ]
+		BST	->	SSS			[ color="black" ]
+		T8	->	NVT			[ color="black:black:black" ]
+		GFE	->	TS			[ /*color="black:black:black"*/ color="red:red:red" constraint=false ]
+		NT	->	TF			[ /*color="black:black"*/ color="red:red" constraint=false ]
+
+		/* Week 5 */
+		GFE	->	NT			[ color="black:black:black" ]
+		BST	->	NVT			[ color="black" ]
+		TS	->	SSS			[ color="black:black:black"  ]
+		T8	->	TF			[ color="black:black:black" ]
+		
+	}
+
+	subgraph EU {
+		MSF	[image="misfits.png"];
+		FNC	[image="fnatic.png"];
+		DIG	[image="dignitas.png"];
+		EXP	[image="expert.png"];
+		PD	[image="playing-ducks.png"];
+		BEG	[image="begenius.png"];
+		SNG	[image="team-synergy.png"];
+		TRC	[image="tricked.png"];
+
+		/* Week 1 */
+		MSF	->	DIG		[ color="black:black:black" ]
+		EXP	->	PD		[ color="black:black:black" ]
+		SNG	->	BEG		[ color="black:black" ]
+		FNC	->	TRC		[ color="black:black" ]
+		EXP	->	TRC		[ color="black:black:black" ]
+		MSF	->	FNC		[ color="black" ]
+
+		/* Week 2 */
+		DIG	->	SNG		[ color="black:black:black" ]
+		PD	->	BEG		[ color="black:black" ]
+		DIG	->	TRC		[ color="black:black:black" ]
+		MSF	->	PD		[ color="black:black" ]
+		FNC	->	SNG		[ color="black:black:black" ]
+		EXP	->	BEG		[ color="black:black:black" ]
+
+		/* Week 3 */
+		PD	->	TRC		[ color="black" ]
+		FNC	->	BEG		[ color="black:black:black" ]
+		MSF	->	SNG		[ color="black:black:black" ]
+		DIG	->	EXP		[ color="black:black" ]
+		FNC	->	EXP		[ color="black" ]
+		TRC	->	SNG		[ color="black:black" ]
+
+		/* Week 4 */
+		DIG	->	PD		[ color="black:black" ]
+		MSF	->	BEG		[ color="black:black:black" ]
+		TRC	->	BEG		[ color="black:black:black" ]
+		MSF	->	EXP		[ color="black:black:black" ]
+		FNC	->	DIG		[ color="black" ]
+		PD	->	SNG		[ color="black" ]
+
+		/* Week 5 */
+		FNC	->	PD		[ color="black:black" ]
+		MSF	->	TRC		[ color="black" ]
+		DIG	->	BEG		[ color="black:black:black" ]
+		EXP	->	SNG		[ color="black:black:black" ]
+		
+	}
+}
