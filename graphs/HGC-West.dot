@@ -105,11 +105,32 @@ digraph West {
 		
 	}
 
-	/* Western Clash */
-	edge [ color=gray style=dashed constraint=false dir=none ]
-	MSF	->	NOM	[  ]
-	T8	->	DIG	[  ]
-	TS	->	INF	[  ]
-	FNC	->	GFE	[  ]
+	/*** Western Clash ***/
+
+	/* Upper Bracket: Round 1 */
+	MSF	->	NOM	[ color="blue" ]
+	DIG	->	T8	[ color="blue" ]
+	TS	->	INF	[ color="blue:blue" ]
+	FNC	->	GFE	[ color="blue:blue" ]
+
+	/* Lower Bracket: Round 1 */
+	T8	->	NOM	[ color="blue" ]
+	GFE	->	INF	[ color="blue:blue" ]
 	
+	/* Upper Bracket: Round 2 */
+	edge [ color=gray style=dashed constraint=false dir=none ]
+	MSF	->	DIG	[  ]
+	TS	->	FNC	[  ]
+
+	/* Lower Bracket: Round 2 */
+	T8	->	GFE	[  ]
+
+	/* Upper Bracket: Round 3 */
+
+	/* Lower Bracket: Round 3 */
+
+	/* Upper Bracket: Round 4 */
+
+	/* Lower Bracket: Round 4 */
+
 }
