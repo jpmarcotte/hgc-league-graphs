@@ -1,5 +1,5 @@
 digraph legend {
-	node [ color="white" label="" ] 
+	node [ shape="none" label="" ] 
 	rankdir="LR";
 
 	v	->	w	[ color="gray" style="dashed" dir="none" label="Not yet played" ]
