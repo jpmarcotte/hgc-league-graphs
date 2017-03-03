@@ -123,7 +123,6 @@ digraph West {
 	TS	->	FNC	[  ]
 
 	/* Lower Bracket: Round 2 */
-	T8	->	GFE	[  ]
 
 	/* Upper Bracket: Round 3 */
 
