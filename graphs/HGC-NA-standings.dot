@@ -11,40 +11,40 @@ digraph NA {
 	TF	[image="team-freedom.png"];
 
 	/* Week 1 */
-	TS	->	NVT			[ color="black" ]
+	TS	->	NVT			[ color="gray:black:gray" ]
 	T8	->	NT			[ color="black:black:black" ]
-	SSS	->	TF			[ color="black:black" ]
-	GFE	->	BST			[ color="black" ]
-	T8	->	BST			[ color="black:black" ]
+	SSS	->	TF			[ color="black:gray:black" ]
+	GFE	->	BST			[ color="gray:black:gray" ]
+	T8	->	BST			[ color="black:gray:black" ]
 	GFE	->	NVT			[ color="black:black:black" ]
 
 	/* Week 2 */
-	TS	->	TF			[ color="black" ]
-	SSS	->	NT			[ color="black:black" ]
+	TS	->	TF			[ color="gray:black:gray" ]
+	SSS	->	NT			[ color="black:gray:black" ]
 	TS	->	BST			[ color="black:black:black" ]
-	NVT	->	NT			[ color="black" /*constraint=false color=red*/ ]
-	TF	->	GFE			[ constraint=false color=red ]
+	NVT	->	NT			[ color="gray:black:gray" /*constraint=false color=red*/ ]
+	TF	->	GFE			[ constraint=false color="gray:red:gray" ]
 	T8	->	SSS			[ color="black:black:black" ]
 
 	/* Week 3 */
 	BST	->	NT			[ color="black:black:black" ]
 	GFE	->	SSS			[ color="black:black:black" ]
-	TF	->	NVT			[ color="black:black" ]
-	TS	->	T8			[ color="black" /*color=red constraint=false*/ ]
-	T8	->	GFE			[ color="black" /*color=red constraint=false*/ ]
-	BST	->	TF			[ color="black:black" ]
+	TF	->	NVT			[ color="black:gray:black" ]
+	TS	->	T8			[ color="gray:black:gray" /*color=red constraint=false*/ ]
+	T8	->	GFE			[ color="gray:black:gray" /*color=red constraint=false*/ ]
+	BST	->	TF			[ color="black:gray:black" ]
 
 	/* Week 4 */
 	TS	->	NT			[ color="black:black:black" ]
 	SSS	->	NVT			[ color="black:black:black" ]
-	BST	->	SSS			[ color="black" ]
+	BST	->	SSS			[ color="gray:black:gray" ]
 	T8	->	NVT			[ color="black:black:black" ]
 	GFE	->	TS			[ /*color="black:black:black"*/ color="red:red:red" constraint=false ]
-	NT	->	TF			[ /*color="black:black"*/ color="red:red" constraint=false ]
+	NT	->	TF			[ /*color="black:gray:black"*/ color="red:gray:red" constraint=false ]
 
 	/* Week 5 */
 	GFE	->	NT			[ color="black:black:black" ]
-	BST	->	NVT			[ color="black" ]
+	BST	->	NVT			[ color="gray:black:gray" ]
 	TS	->	SSS			[ color="black:black:black"  ]
 	T8	->	TF			[ color="black:black:black" ]
 	
