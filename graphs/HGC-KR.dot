@@ -13,37 +13,37 @@ digraph KR {
 
 	/* Week 1 */
 	L5	->	BLS		[ color="black:black:black" ]
-	MTY	->	MVPM		[ color="black" ]
-	MVPB	->	TP		[ color="black:black" ]
+	MTY	->	MVPM		[ color="gray:black:gray" ]
+	MVPB	->	TP		[ color="black:gray:black" ]
 	MVPB	->	RVN		[ color="black:black:black" ]
 	TP	->	GG		[ color="black:black:black" ]
 	L5	->	MTY		[ color="black:black:black" ]
-	MTY	->	GG		[ color="black" ]
+	MTY	->	GG		[ color="gray:black:gray" ]
 	L5	->	RVN		[ color="black:black:black" ]
-	MVPM	->	BLS		[ color="black" ]
+	MVPM	->	BLS		[ color="gray:black:gray" ]
 
 	/* Week 2 */
-	TP	->	MVPM		[ color="black:black" ]
+	TP	->	MVPM		[ color="black:gray:black" ]
 	MVPB	->	BLS		[ color="black:black:black" ]
 	GG	->	RVN		[ color="black:black:black" ]
 	MTY	->	RVN		[ color="black:black:black" ]
-	L5	->	MVPM		[ color="black:black" ]
+	L5	->	MVPM		[ color="black:gray:black" ]
 	TP	->	BLS		[ color="black:black:black" ]
-	TP	->	MTY		[ color="black" ]
+	TP	->	MTY		[ color="gray:black:gray" ]
 	L5	->	GG		[ color="black:black:black" ]
-	MVPB	->	MVPM		[ color="black:black" ]
+	MVPB	->	MVPM		[ color="black:gray:black" ]
 
 	/* Week 3 */
 	BLS	->	RVN		[ color="black:black:black" ]
 	MVPB	->	GG		[ color="black:black:black" ]
-	L5	->	TP		[ color="black:black" ]
+	L5	->	TP		[ color="black:gray:black" ]
 	MVPB	->	MTY		[ color="black:black:black" ]
-	GG	->	BLS		[ color="black" ]
-	MVPM	->	RVN		[ color="black" ]
+	GG	->	BLS		[ color="gray:black:gray" ]
+	MVPM	->	RVN		[ color="gray:black:gray" ]
 
 	/* Week 4 */
 	L5	->	MVPB		[ color="black:black:black" ]
 	TP	->	RVN		[ color="black:black:black" ]
-	GG	->	MVPM		[ color="black" ]
-	MTY	->	BLS		[ color="black" ]
+	GG	->	MVPM		[ color="gray:black:gray" ]
+	MTY	->	BLS		[ color="gray:black:gray" ]
 }

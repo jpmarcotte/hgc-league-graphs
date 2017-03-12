@@ -1,0 +1,22 @@
+digraph legend {
+	node [ shape="none" label="" ] 
+	rankdir="LR";
+
+	v	->	w	[ color="gray" style="dashed" dir="none" label="Not yet played" ]
+	t	->	u	[ color="blue"	label="Mid Season Clash" ]
+	q	->	s	[ color="red"	label="Season Anomaly?" ]
+	o	->	p	[ color="black" label="Season Game" ]
+
+	m	->  n	[ color="white" label="Color"]
+
+	k	->	l	[ color="black:gray" label="Best of 3: 2-1" ]
+	i	->	j	[ color="black:black" label="Best of 3: 2-0" ]
+
+	c	->	d	[ color="gray:black:gray" label="Best of 5: 3-2" ]
+	e	->	f	[ color="black:gray:black" label="Best of 5: 3-1" ]
+	g	->	h	[ color="black:black:black" label="Best of 5: 3-0" ]
+
+	a [ label="Winner" ]
+	b [ label="Loser" ]
+	a	->  b	[ color="white" label="Match Score" ]
+}

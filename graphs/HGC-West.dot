@@ -16,16 +16,16 @@ digraph West {
 		TF	[image="team-freedom.png"];
 
 		/* Week 1 */
-		TS	->	NVT			[ color="black" ]
+		TS	->	NVT			[ color="gray:black:gray" ]
 		T8	->	NT			[ color="black:black:black" ]
-		SSS	->	TF			[ color="black:black" ]
-		GFE	->	BST			[ color="black" ]
-		T8	->	BST			[ color="black:black" ]
+		SSS	->	TF			[ color="black:gray:black" ]
+		GFE	->	BST			[ color="gray:black:gray" ]
+		T8	->	BST			[ color="black:gray:black" ]
 		GFE	->	NVT			[ color="black:black:black" ]
 
 		/* Week 2 */
-		TS	->	TF			[ color="black" ]
-		SSS	->	NT			[ color="black:black" ]
+		TS	->	TF			[ color="gray:black:gray" ]
+		SSS	->	NT			[ color="black:gray:black" ]
 		TS	->	BST			[ color="black:black:black" ]
 		NVT	->	NT			[ constraint=false color=red ]
 		TF	->	GFE			[ constraint=false color=red ]
@@ -34,22 +34,22 @@ digraph West {
 		/* Week 3 */
 		BST	->	NT			[ color="black:black:black" ]
 		GFE	->	SSS			[ color="black:black:black" ]
-		TF	->	NVT			[ color="black:black" ]
-		TS	->	T8			[ /*color="black"*/ color=red constraint=false ]
-		T8	->	GFE			[ color="black" /*color=red constraint=false*/ ]
-		BST	->	TF			[ color="black:black" ]
+		TF	->	NVT			[ color="black:gray:black" ]
+		TS	->	T8			[ /*color="gray:black:gray"*/ color=red constraint=false ]
+		T8	->	GFE			[ color="gray:black:gray" /*color=red constraint=false*/ ]
+		BST	->	TF			[ color="black:gray:black" ]
 
 		/* Week 4 */
 		TS	->	NT			[ color="black:black:black" ]
 		SSS	->	NVT			[ color="black:black:black" ]
-		BST	->	SSS			[ color="black" ]
+		BST	->	SSS			[ color="gray:black:gray" ]
 		T8	->	NVT			[ color="black:black:black" ]
 		GFE	->	TS			[ color="black:black:black" ]
-		NT	->	TF			[ color="black:black" ]
+		NT	->	TF			[ color="black:gray:black" ]
 
 		/* Week 5 */
 		GFE	->	NT			[ color="black:black:black" ]
-		BST	->	NVT			[ color="black" ]
+		BST	->	NVT			[ color="gray:black:gray" ]
 		TS	->	SSS			[ color="black:black:black" ]
 		T8	->	TF			[ color="black:black:black" ]
 		
@@ -68,38 +68,38 @@ digraph West {
 		/* Week 1 */
 		MSF	->	DIG		[ color="black:black:black" ]
 		EXP	->	PD		[ color="black:black:black" ]
-		SNG	->	BEG		[ color="black:black" ]
-		FNC	->	TRC		[ color="black:black" ]
+		SNG	->	BEG		[ color="black:gray:black" ]
+		FNC	->	TRC		[ color="black:gray:black" ]
 		EXP	->	TRC		[ color="black:black:black" ]
-		MSF	->	FNC		[ color="black" ]
+		MSF	->	FNC		[ color="gray:black:gray" ]
 
 		/* Week 2 */
 		DIG	->	SNG		[ color="black:black:black" ]
-		PD	->	BEG		[ color="black:black" ]
+		PD	->	BEG		[ color="black:gray:black" ]
 		DIG	->	TRC		[ color="black:black:black" ]
-		MSF	->	PD		[ color="black:black" ]
+		MSF	->	PD		[ color="black:gray:black" ]
 		FNC	->	SNG		[ color="black:black:black" ]
 		EXP	->	BEG		[ color="black:black:black" ]
 
 		/* Week 3 */
-		PD	->	TRC		[ color="black" ]
+		PD	->	TRC		[ color="gray:black:gray" ]
 		FNC	->	BEG		[ color="black:black:black" ]
 		MSF	->	SNG		[ color="black:black:black" ]
-		DIG	->	EXP		[ color="black:black" ]
-		FNC	->	EXP		[ color="black" ]
-		TRC	->	SNG		[ color="black:black" ]
+		DIG	->	EXP		[ color="black:gray:black" ]
+		FNC	->	EXP		[ color="gray:black:gray" ]
+		TRC	->	SNG		[ color="black:gray:black" ]
 
 		/* Week 4 */
-		DIG	->	PD		[ color="black:black" ]
+		DIG	->	PD		[ color="black:gray:black" ]
 		MSF	->	BEG		[ color="black:black:black" ]
 		TRC	->	BEG		[ color="black:black:black" ]
 		MSF	->	EXP		[ color="black:black:black" ]
-		FNC	->	DIG		[ color="black" ]
-		PD	->	SNG		[ color="black" ]
+		FNC	->	DIG		[ color="gray:black:gray" ]
+		PD	->	SNG		[ color="gray:black:gray" ]
 
 		/* Week 5 */
-		FNC	->	PD		[ color="black:black" ]
-		MSF	->	TRC		[ color="black" ]
+		FNC	->	PD		[ color="black:gray:black" ]
+		MSF	->	TRC		[ color="gray:black:gray" ]
 		DIG	->	BEG		[ color="black:black:black" ]
 		EXP	->	SNG		[ color="black:black:black" ]
 		
@@ -108,28 +108,34 @@ digraph West {
 	/*** Western Clash ***/
 
 	/* Upper Bracket: Round 1 */
-	MSF	->	NOM	[ color="blue" ]
-	DIG	->	T8	[ color="blue" ]
+	MSF	->	NOM	[ color="blue:gray" ]
+	DIG	->	T8	[ color="blue:gray" ]
 	TS	->	INF	[ color="blue:blue" ]
 	FNC	->	GFE	[ color="blue:blue" ]
 
 	/* Lower Bracket: Round 1 */
-	T8	->	NOM	[ color="blue" ]
+	T8	->	NOM	[ color="blue:gray" ]
 	GFE	->	INF	[ color="blue:blue" ]
 	
 	/* Upper Bracket: Round 2 */
-	edge [ color=gray style=dashed constraint=false dir=none ]
-	MSF	->	DIG	[  ]
-	TS	->	FNC	[  ]
+	MSF	->	DIG	[ color="blue:blue:blue" ]
+	FNC	->	TS	[ color="blue:blue:blue" ]
 
 	/* Lower Bracket: Round 2 */
+	T8	->	TS	[ color="gray:blue:gray" ]
+	DIG	->	GFE	[ color="blue:blue:blue" ]
 
 	/* Upper Bracket: Round 3 */
+	FNC	->	MSF	[ color="blue:gray:blue" ]
 
 	/* Lower Bracket: Round 3 */
+	DIG	->	T8	[ color="blue:blue:blue" ]
 
 	/* Upper Bracket: Round 4 */
+	DIG	->	FNC	[ color="gray:blue:gray" ]
 
 	/* Lower Bracket: Round 4 */
+	DIG	->	MSF	[ color="gray:blue:gray" ]
 
+	edge [ color=gray style=dashed constraint=false dir=none ]
 }
