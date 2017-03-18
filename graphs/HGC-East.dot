@@ -1,0 +1,91 @@
+// vim: set ts=5 sw=5:
+digraph East {
+
+	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	imagepath="logos/";
+
+	subgraph KR {
+		L5	[ image="l5.png" ]
+		MVPB	[ image="mvp-black.png" ]
+		TP	[ image="tempest.png" ]
+		MTY	[ image="mighty.png" ]
+		GG	[ image="gg.png" style="filled" fillcolor="gray" ]
+		MVPM	[ image="mvp-miracle.png" ]
+		BLS	[ image="blossom.png" ]
+		RVN	[ image="raven.png" ]
+
+		/* Week 1 */
+		L5	->	BLS		[ color="black:black:black" ]
+		MTY	->	MVPM		[ color="black" ]
+		MVPB	->	TP		[ color="black:black" ]
+		MVPB	->	RVN		[ color="black:black:black" ]
+		TP	->	GG		[ color="black:black:black" ]
+		L5	->	MTY		[ color="black:black:black" ]
+		MTY	->	GG		[ color="black" ]
+		L5	->	RVN		[ color="black:black:black" ]
+		MVPM	->	BLS		[ color="black" ]
+
+		/* Week 2 */
+		TP	->	MVPM		[ color="black:black" ]
+		MVPB	->	BLS		[ color="black:black:black" ]
+		GG	->	RVN		[ color="black:black:black" ]
+		MTY	->	RVN		[ color="black:black:black" ]
+		L5	->	MVPM		[ color="black:black" ]
+		TP	->	BLS		[ color="black:black:black" ]
+		TP	->	MTY		[ color="black" ]
+		L5	->	GG		[ color="black:black:black" ]
+		MVPB	->	MVPM		[ color="black:black" ]
+
+		/* Week 3 */
+		BLS	->	RVN		[ color="black:black:black" ]
+		MVPB	->	GG		[ color="black:black:black" ]
+		L5	->	TP		[ color="black:black" ]
+		MVPB	->	MTY		[ color="black:black:black" ]
+		GG	->	BLS		[ color="black" ]
+		MVPM	->	RVN		[ color="black" ]
+
+		/* Week 4 */
+		L5	->	MVPB		[ color="black:black:black" ]
+		TP	->	RVN		[ color="black:black:black" ]
+		GG	->	MVPM		[ color="black" ]
+		MTY	->	BLS		[ color="black" ]
+	}
+
+	subgraph CN {
+		eStar	[ image="estar-gaming.png" ]
+		SPT	[ image="super-perfect-team.png" ]
+		Zero	[ image="zero.png" ]
+		RSG	[ image="resurgence.png" ]
+		TFC	[ image="tfc.png" ]
+	}
+
+	/*** Eastern Clash ***/
+
+	/* Upper Bracket: Round 1 */
+	L5	->	RSG	[ color="blue:blue" ]
+	TP	->	Zero	[ color="blue:blue" ]
+	eStar	->	TFC	[ color="blue:blue" ]
+	MVPB	->	SPT	[ color="blue:blue" ]
+
+	/* Lower Bracket: Round 1 */
+	Zero	->	RSG	[ color="blue:blue" ]
+	SPT	->	TFC	[ color="blue:blue" ]
+
+	edge [ style="dashed" color="grey" constraint="false" dir="none" ]
+	
+	/* Upper Bracket: Round 2 */
+	L5	->	TP
+	eStar	->	MVPB
+
+	/* Lower Bracket: Round 2 */
+
+	/* Upper Bracket: Round 3 */
+
+	/* Lower Bracket: Round 3 */
+
+	/* Upper Bracket: Round 4 */
+
+	/* Lower Bracket: Round 4 */
+
+	edge [ color=gray style=dashed constraint=false dir=none ]
+}
