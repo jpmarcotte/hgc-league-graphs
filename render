@@ -1,7 +1,7 @@
 #!/bin/bash
-for f in graphs/*.dot
+for f in graphs/*.gv
 do
-	p=${f%.dot}
+	p=${f%.gv}
 	p=${p#graphs/}
 	dot -Tpng "$f" -o "renders/$p.png"
 done
