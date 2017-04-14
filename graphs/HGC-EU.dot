@@ -1,7 +1,7 @@
 digraph EU {
 	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
 	imagepath="logos/";
-	MSF	[image="misfits.png"];
+	TL	[image="liquid.png" style="filled" fillcolor="blue"];
 	FNC	[image="fnatic.png"];
 	DIG	[image="dignitas.png"];
 	EXP	[image="expert.png"];
@@ -11,40 +11,40 @@ digraph EU {
 	TRC	[image="tricked.png"];
 
 	/* Week 1 */
-	MSF	->	DIG		[ color="black:black:black" ]
+	TL	->	DIG		[ color="black:black:black" ]
 	EXP	->	PD		[ color="black:black:black" ]
 	SNG	->	BEG		[ color="black:gray:black" ]
 	FNC	->	TRC		[ color="black:gray:black" ]
 	EXP	->	TRC		[ color="black:black:black" ]
-	MSF	->	FNC		[ color="gray:black:gray" ]
+	TL	->	FNC		[ color="gray:black:gray" ]
 
 	/* Week 2 */
 	DIG	->	SNG		[ color="black:black:black" ]
 	PD	->	BEG		[ color="black:gray:black" ]
 	DIG	->	TRC		[ color="black:black:black" ]
-	MSF	->	PD		[ color="black:gray:black" ]
+	TL	->	PD		[ color="black:gray:black" ]
 	FNC	->	SNG		[ color="black:black:black" ]
 	EXP	->	BEG		[ color="black:black:black" ]
 
 	/* Week 3 */
 	PD	->	TRC		[ color="gray:black:gray" ]
 	FNC	->	BEG		[ color="black:black:black" ]
-	MSF	->	SNG		[ color="black:black:black" ]
+	TL	->	SNG		[ color="black:black:black" ]
 	DIG	->	EXP		[ color="black:gray:black" ]
 	FNC	->	EXP		[ color="gray:black:gray" ]
 	TRC	->	SNG		[ color="black:gray:black" ]
 
 	/* Week 4 */
 	DIG	->	PD		[ color="black:gray:black" ]
-	MSF	->	BEG		[ color="black:black:black" ]
+	TL	->	BEG		[ color="black:black:black" ]
 	TRC	->	BEG		[ color="black:black:black" ]
-	MSF	->	EXP		[ color="black:black:black" ]
+	TL	->	EXP		[ color="black:black:black" ]
 	FNC	->	DIG		[ color="gray:black:gray" ]
 	PD	->	SNG		[ color="gray:black:gray" ]
 
 	/* Week 5 */
 	FNC	->	PD		[ color="black:gray:black" ]
-	MSF	->	TRC		[ color="gray:black:gray" ]
+	TL	->	TRC		[ color="gray:black:gray" ]
 	DIG	->	BEG		[ color="black:black:black" ]
 	EXP	->	SNG		[ color="black:black:black" ]
 
@@ -59,7 +59,7 @@ digraph EU {
 	INF	[image="infamous.png"]
 
 	/* Upper Bracket: Round 1 */
-	MSF	->	NOM	[ color="blue:gray" ]
+	TL	->	NOM	[ color="blue:gray" ]
 	DIG	->	T8	[ color="blue:gray" ]
 	TS	->	INF	[ color="blue:blue" ]
 	FNC	->	GFE	[ color="blue:blue" ]
@@ -69,7 +69,7 @@ digraph EU {
 	GFE	->	INF	[ color="blue:blue" ]
 	
 	/* Upper Bracket: Round 2 */
-	MSF	->	DIG	[ color="blue:blue:blue" ]
+	TL	->	DIG	[ color="blue:blue:blue" ]
 	FNC	->	TS	[ color="blue:blue:blue" ]
 
 	/* Lower Bracket: Round 2 */
@@ -77,7 +77,7 @@ digraph EU {
 	DIG	->	GFE	[ color="blue:blue:blue" ]
 
 	/* Upper Bracket: Round 3 */
-	FNC	->	MSF	[ color="blue:gray:blue" ]
+	FNC	->	TL	[ color="blue:gray:blue" ]
 
 	/* Lower Bracket: Round 3 */
 	DIG	->	T8	[ color="blue:blue:blue" ]
@@ -86,17 +86,17 @@ digraph EU {
 	DIG	->	FNC	[ color="gray:blue:gray" ]
 
 	/* Lower Bracket: Round 4 */
-	DIG	->	MSF	[ color="gray:blue:gray" ]
+	DIG	->	TL	[ color="gray:blue:gray" ]
 
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
 	/* Week 6 */
 	FNC	->	EXP
-	MSF	->	TRC
+	TL	->	TRC
 	SNG	->	BEG
 	PD	->	DIG
-	PD	->	MSF
+	PD	->	TL
 	EXP	->	DIG
 	
 }

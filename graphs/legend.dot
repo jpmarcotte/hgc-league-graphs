@@ -2,10 +2,11 @@ digraph legend {
 	node [ shape="none" label="" ] 
 	rankdir="LR";
 
-	v	->	w	[ color="gray" style="dashed" dir="none" label="Not yet played" ]
-	t	->	u	[ color="blue"	label="Mid Season Clash" ]
-	q	->	s	[ color="red"	label="Season Anomaly?" ]
-	o	->	p	[ color="black" label="Season Game" ]
+	w	->	x	[ color="gray" style="dashed" dir="none" label="Not yet played" ]
+	u	->	v	[ color="blue"	label="Mid Season Clash" ]
+	s	->	t	[ color="red"	label="Season Anomaly?" ]
+	q	->	r	[ color="green" label="Season Game: 2nd Half" ]
+	o	->	p	[ color="black" label="Season Game: 1st Half" ]
 
 	m	->  n	[ color="white" label="Color"]
 

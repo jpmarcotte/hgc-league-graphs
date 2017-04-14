@@ -1,0 +1,67 @@
+// vim: set ts=5 sw=5:
+digraph CN {
+	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	imagepath="logos/";
+	eStar	[ image="estar-gaming.png" ]
+	SPT	[ image="super-perfect-team.png" ]
+	Zero	[ image="zero.png" ]
+	CE	[ image="ce.png" ]
+	RPG	[ image="rpg.png" ]
+	XTeam	[ image="xteam.png" ]
+	HL	[ image="hots-lady.png" ]
+	KIS	[ image="keep-it-simple.png" ]
+	SOA	[ image="start-over-again.png" ]
+
+	/*** Eastern Clash ***/
+	node [ width="0.25" ]
+	RSG	[ image="resurgence.png" ]
+	TFC	[ image="tfc.png" ]
+	L5	[ image="l5.png" ]
+	MVPB	[ image="mvp-black.png" ]
+	TP	[ image="tempest.png" ]
+
+	/* Upper Bracket: Round 1 */
+	L5	->	RSG	[ color="blue:blue" ]
+	TP	->	Zero	[ color="blue:blue" ]
+	eStar	->	TFC	[ color="blue:blue" ]
+	MVPB	->	SPT	[ color="blue:blue" ]
+
+	/* Lower Bracket: Round 1 */
+	Zero	->	RSG	[ color="blue:blue" ]
+	SPT	->	TFC	[ color="blue:blue" ]
+
+	/* Upper Bracket: Round 2 */
+	L5	->	TP	[ color="blue:blue:blue" ]
+	MVPB	->	eStar	[ color="gray:blue:gray" ]
+
+	/* Lower Bracket: Round 2 */
+	eStar	->	Zero	[ color="blue:blue:blue" ]
+	TP	->	SPT	[ color="blue:blue:blue" ]
+
+	/* Lower Bracket: Round 3 */
+	TP	->	eStar	[ color="blue:blue:blue" ]
+
+	/* Upper Bracket: Round 3 */
+	MVPB	->	L5	[ color="gray:blue:gray" ]
+
+	/* Lower Bracket: Round 4 */
+	L5	->	TP	[ color="blue:blue:blue" ]
+
+	/* Upper Bracket: Round 4 */
+	MVPB	->	L5	[ color="blue:gray:blue" ]
+
+	/* Week 6 */
+	XTeam	->	KIS	[ color="green:green:green" ]
+	CE	->	SOA	[ color="green:green:green" ]
+	eStar	->	HL	[ color="green:green:green" ]
+	SPT	->	RPG	[ color="green:green:green" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+	/* Week 7 */
+	HL	-> XTeam
+	eStar	->	RPG
+	CE	->	SPT
+	KIS	->	SOA
+
+}

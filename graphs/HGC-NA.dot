@@ -52,14 +52,14 @@ digraph NA {
 
 	/*** Western Clash ***/
 	node [ width="0.25" ]
-	MSF	[image="misfits.png"];
+	TL	[image="liquid.png" style=filled fillcolor=blue ];
 	FNC	[image="fnatic.png"];
 	DIG	[image="dignitas.png"];
 	NOM	[image="nomia.png"]
 	INF	[image="infamous.png"]
 
 	/* Upper Bracket: Round 1 */
-	MSF	->	NOM	[ color="blue:gray" ]
+	TL	->	NOM	[ color="blue:gray" ]
 	DIG	->	T8	[ color="blue:gray" ]
 	TS	->	INF	[ color="blue:blue" ]
 	FNC	->	GFE	[ color="blue:blue" ]
@@ -69,24 +69,24 @@ digraph NA {
 	GFE	->	INF	[ color="blue:blue" ]
 	
 	/* Upper Bracket: Round 2 */
-	MSF	->	DIG	[ color="blue:blue:blue" ]
+	TL	->	DIG	[ color="blue:blue:blue" ]
 	FNC	->	TS	[ color="blue:blue:blue" ]
 
 	/* Lower Bracket: Round 2 */
-	T8	->	TS	[ color="gray:blue:gray" ]
+	T8	->	TS	[ color="gray:blue:gray" constraint=false ]
 	DIG	->	GFE	[ color="blue:blue:blue" ]
 
 	/* Upper Bracket: Round 3 */
-	FNC	->	MSF	[ color="blue:gray:blue" ]
+	FNC	->	TL	[ color="blue:gray:blue" constraint=false ]
 
 	/* Lower Bracket: Round 3 */
 	DIG	->	T8	[ color="blue:blue:blue" ]
 
 	/* Upper Bracket: Round 4 */
-	DIG	->	FNC	[ color="gray:blue:gray" ]
+	DIG	->	FNC	[ color="gray:blue:gray" constraint=false ]
 
 	/* Lower Bracket: Round 4 */
-	DIG	->	MSF	[ color="gray:blue:gray" ]
+	DIG	->	TL	[ color="gray:blue:gray" constraint=false ]
 
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
