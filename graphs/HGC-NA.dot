@@ -22,7 +22,7 @@ digraph NA {
 	TS	->	TF			[ color="gray:black:gray" ]
 	SSS	->	NT			[ color="black:gray:black" ]
 	TS	->	BST			[ color="black:black:black" ]
-	NVT	->	NT			[ constraint=false color="gray:red:gray" ]
+	NVT	->	NT			[ color="gray:black:gray" /*constraint=false color=red*/ ]
 	TF	->	GFE			[ constraint=false color="gray:red:gray" ]
 	T8	->	SSS			[ color="black:black:black" ]
 
@@ -30,8 +30,8 @@ digraph NA {
 	BST	->	NT			[ color="black:black:black" ]
 	GFE	->	SSS			[ color="black:black:black" ]
 	TF	->	NVT			[ color="black:gray:black" ]
-	TS	->	T8			[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint=false ]
-	T8	->	GFE			[ color="gray:black:gray" /*color="gray:red:gray" constraint=false*/ ]
+	TS	->	T8			[ color="gray:black:gray" /*color=red constraint=false*/ ]
+	T8	->	GFE			[ color="gray:black:gray" /*color=red constraint=false*/ ]
 	BST	->	TF			[ color="black:gray:black" ]
 
 	/* Week 4 */
@@ -39,8 +39,8 @@ digraph NA {
 	SSS	->	NVT			[ color="black:black:black" ]
 	BST	->	SSS			[ color="gray:black:gray" ]
 	T8	->	NVT			[ color="black:black:black" ]
-	GFE	->	TS			[ color="black:black:black" ]
-	NT	->	TF			[ color="black:gray:black" ]
+	GFE	->	TS			[ /*color="black:black:black"*/ color="red:red:red" constraint=false ]
+	NT	->	TF			[ /*color="black:gray:black"*/ color="red:gray:red" constraint=false ]
 
 	/* Week 5 */
 	GFE	->	NT			[ color="black:black:black" ]
@@ -48,4 +48,55 @@ digraph NA {
 	TS	->	SSS			[ color="black:black:black"  ]
 	T8	->	TF			[ color="black:black:black" ]
 	
+
+
+	/*** Western Clash ***/
+	node [ width="0.25" ]
+	MSF	[image="misfits.png"];
+	FNC	[image="fnatic.png"];
+	DIG	[image="dignitas.png"];
+	NOM	[image="nomia.png"]
+	INF	[image="infamous.png"]
+
+	/* Upper Bracket: Round 1 */
+	MSF	->	NOM	[ color="blue:gray" ]
+	DIG	->	T8	[ color="blue:gray" ]
+	TS	->	INF	[ color="blue:blue" ]
+	FNC	->	GFE	[ color="blue:blue" ]
+
+	/* Lower Bracket: Round 1 */
+	T8	->	NOM	[ color="blue:gray" ]
+	GFE	->	INF	[ color="blue:blue" ]
+	
+	/* Upper Bracket: Round 2 */
+	MSF	->	DIG	[ color="blue:blue:blue" ]
+	FNC	->	TS	[ color="blue:blue:blue" ]
+
+	/* Lower Bracket: Round 2 */
+	T8	->	TS	[ color="gray:blue:gray" ]
+	DIG	->	GFE	[ color="blue:blue:blue" ]
+
+	/* Upper Bracket: Round 3 */
+	FNC	->	MSF	[ color="blue:gray:blue" ]
+
+	/* Lower Bracket: Round 3 */
+	DIG	->	T8	[ color="blue:blue:blue" ]
+
+	/* Upper Bracket: Round 4 */
+	DIG	->	FNC	[ color="gray:blue:gray" ]
+
+	/* Lower Bracket: Round 4 */
+	DIG	->	MSF	[ color="gray:blue:gray" ]
+
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+	/* Week 6 */
+	GFE	->	T8
+	NVT	->	BST
+	TF	->	SSS
+	NT	->	TS
+	NT	->	NVT
+	T8	->	TS
+
 }

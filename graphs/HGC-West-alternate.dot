@@ -27,16 +27,16 @@ digraph West {
 		TS	->	TF			[ color="gray:black:gray" ]
 		SSS	->	NT			[ color="black:gray:black" ]
 		TS	->	BST			[ color="black:black:black" ]
-		NVT	->	NT			[ color="gray:black:gray" /*constraint=false color"gray:red:gray"*/ ]
-		TF	->	GFE			[ constraint=false color="gray:red:gray" ]
+		NVT	->	NT			[ constraint=false color=red ]
+		TF	->	GFE			[ constraint=false color=red ]
 		T8	->	SSS			[ color="black:black:black" ]
 
 		/* Week 3 */
 		BST	->	NT			[ color="black:black:black" ]
 		GFE	->	SSS			[ color="black:black:black" ]
 		TF	->	NVT			[ color="black:gray:black" ]
-		TS	->	T8			[ color="gray:black:gray" /*color"gray:red:gray" constraint=false*/ ]
-		T8	->	GFE			[ color="gray:black:gray" /*color"gray:red:gray" constraint=false*/ ]
+		TS	->	T8			[ /*color="gray:black:gray"*/ color=red constraint=false ]
+		T8	->	GFE			[ color="gray:black:gray" /*color=red constraint=false*/ ]
 		BST	->	TF			[ color="black:gray:black" ]
 
 		/* Week 4 */
@@ -44,13 +44,13 @@ digraph West {
 		SSS	->	NVT			[ color="black:black:black" ]
 		BST	->	SSS			[ color="gray:black:gray" ]
 		T8	->	NVT			[ color="black:black:black" ]
-		GFE	->	TS			[ /*color="black:black:black"*/ color="red:red:red" constraint=false ]
-		NT	->	TF			[ /*color="black:gray:black"*/ color="red:gray:red" constraint=false ]
+		GFE	->	TS			[ color="black:black:black" ]
+		NT	->	TF			[ color="black:gray:black" ]
 
 		/* Week 5 */
 		GFE	->	NT			[ color="black:black:black" ]
 		BST	->	NVT			[ color="gray:black:gray" ]
-		TS	->	SSS			[ color="black:black:black"  ]
+		TS	->	SSS			[ color="black:black:black" ]
 		T8	->	TF			[ color="black:black:black" ]
 		
 	}
