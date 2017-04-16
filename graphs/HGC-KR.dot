@@ -53,24 +53,32 @@ digraph KR {
 	SPT	[ image="super-perfect-team.png" ]
 	Zero	[ image="zero.png" ]
 	RSG	[ image="resurgence.png" ]
+/*
 	TFC	[ image="tfc.png" ]
+*/
 
 	/* Upper Bracket: Round 1 */
 	L5	->	RSG	[ color="blue:blue" ]
 	TP	->	Zero	[ color="blue:blue" ]
+/*
 	eStar	->	TFC	[ color="blue:blue" ]
+*/
 	MVPB	->	SPT	[ color="blue:blue" ]
 
 	/* Lower Bracket: Round 1 */
+/*
 	Zero	->	RSG	[ color="blue:blue" ]
 	SPT	->	TFC	[ color="blue:blue" ]
+*/
 
 	/* Upper Bracket: Round 2 */
 	L5	->	TP	[ color="blue:blue:blue" ]
 	MVPB	->	eStar	[ color="gray:blue:gray" ]
 
 	/* Lower Bracket: Round 2 */
+/*
 	eStar	->	Zero	[ color="blue:blue:blue" ]
+*/
 	TP	->	SPT	[ color="blue:blue:blue" ]
 
 	/* Lower Bracket: Round 3 */
@@ -85,13 +93,21 @@ digraph KR {
 	/* Upper Bracket: Round 4 */
 	MVPB	->	L5	[ color="blue:gray:blue" ]
 
+	/* Week 6 */
+	MVPB	->	TP	[ color="green:gray:green" ]
+	MVPM	->	BLS	[ color="green:green:green" ]
+	GG	->	RVN	[ color="green:green:green" ]
+	L5	->	MTY	[ color="green:green:green" ]
+	L5	->	GG	[ color="green:green:green" ]
+	TP	->	BLS	[ color="green:green:green" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 6 */
-	MVPB	->	TP
-	MVPM	->	BLS
-	GG	->	RVN
-	L5	->	MTY
-	L5	->	GG
-	TP	->	BLS
+	RVN	->	MVPM
+	GG	->	BLS
+	MVPB	->	MTY
+	TP	->	L5
+	MVPB	->	MVPM
+	RVN	->	MTY
+
 }

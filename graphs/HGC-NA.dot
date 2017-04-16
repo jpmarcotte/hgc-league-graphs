@@ -101,11 +101,13 @@ digraph NA {
 */
 
 
-	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
 	/* Week 6 */
-	GFE	->	T8
-	NVT	->	BST
+	GFE	->	T8	[ color="green:green:green" ]
+	NVT	->	BST	[ color="green:green:green" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
 	TF	->	SSS
 	NT	->	TS
 	NT	->	NVT

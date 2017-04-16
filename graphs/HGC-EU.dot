@@ -65,7 +65,7 @@ digraph EU {
 	DIG	->	T8	[ color="blue:gray" ]
 /*
 	TS	->	INF	[ color="blue:blue" ]
-*?
+*/
 	FNC	->	GFE	[ color="blue:blue" ]
 
 	/* Lower Bracket: Round 1 */
@@ -100,9 +100,9 @@ digraph EU {
 	/* Week 6 */
 	FNC	->	EXP	[ color="green:gray:green" ]
 	TL	->	TRC	[ color="gray:green:gray" ]
+	SNG	->	BEG	[ color="green:gray:green" ]
+	DIG	->	PD	[ color="green:green:green" ]
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
-	SNG	->	BEG
-	PD	->	DIG
 	PD	->	TL
 	EXP	->	DIG
 	
