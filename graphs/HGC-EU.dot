@@ -102,8 +102,17 @@ digraph EU {
 	TL	->	TRC	[ color="gray:green:gray" ]
 	SNG	->	BEG	[ color="green:gray:green" ]
 	DIG	->	PD	[ color="green:green:green" ]
+	TL	->	PD	[ color="gray:green:gray" ]
+	EXP	->	DIG	[ color="gray:green:gray" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
-	PD	->	TL
-	EXP	->	DIG
+
+	/* Week 7 */
+	FNC	->	BEG
+	TRC	->	SNG
+	FNC	->	PD
+	EXP	->	TRC
+	DIG	->	BEG
+	TL	->	SNG
 	
 }

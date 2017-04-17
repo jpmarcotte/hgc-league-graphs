@@ -103,6 +103,7 @@ digraph KR {
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
+	/* Week 7 */
 	RVN	->	MVPM
 	GG	->	BLS
 	MVPB	->	MTY
