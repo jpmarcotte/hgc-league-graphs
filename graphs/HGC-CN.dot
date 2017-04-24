@@ -56,12 +56,18 @@ digraph CN {
 	eStar	->	HL	[ color="green:green:green" ]
 	SPT	->	RPG	[ color="green:green:green" ]
 
+	/* Week 7 */
+	XTeam	->	HL	[ color="green:gray:green" ]
+	eStar	->	RPG	[ color="green:green:green" ]
+	SPT	->	CE	[ color="gray:green:gray" ]
+	SOA	->	KIS	[ color="gray:green:gray" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 7 */
-	HL	-> XTeam
-	eStar	->	RPG
-	CE	->	SPT
-	KIS	->	SOA
+	/* Week 8 */
+	CE	->	RPG
+	HL	->	SOA
+	SPT	->	KIS
+	eStar	->	XTeam
 
 }

@@ -101,14 +101,22 @@ digraph KR {
 	L5	->	GG	[ color="green:green:green" ]
 	TP	->	BLS	[ color="green:green:green" ]
 
+	/* Week 7 */
+	MVPM	->	RVN	[ color="green:green:green" ]
+	GG	->	BLS	[ color="gray:green:gray" ]
+	MVPB	->	MTY	[ color="green:green:green" ]
+	L5	->	TP	[ color="gray:green:gray" ]
+	MVPB	->	MVPM	[ color="green:green:green" ]
+	MTY	->	RVN	[ color="green:green:green" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 7 */
-	RVN	->	MVPM
-	GG	->	BLS
-	MVPB	->	MTY
-	TP	->	L5
-	MVPB	->	MVPM
-	RVN	->	MTY
-
+	/* Week 8 */
+	L5	->	RVN
+	MVPB	->	BLS
+	TP	->	MVPM
+	MTY	->	GG
+	BLS	->	RVN
+	GG	->	MVPM
+	
 }
