@@ -118,13 +118,21 @@ digraph NA {
 	TS	->	SSS	[ color="green:gray:green" ]
 	TF	->	NVT	[ color="green:green:green" ]
 
+	/* Week 8 */
+	BST	->	NT	[ color="green:green:green" ]
+	TS	->	TF	[ color="green:gray:green" ]
+	T8	->	SSS	[ color="green:green:green" ]
+	GFE	->	NVT	[ color="green:green:green" ]
+	TS	->	NVT	[ color="gray:green:gray" ]
+	SSS	->	NT	[ color="green:gray:green" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 8 */
-	BST	->	NT
-	TS	->	TF
-	T8	->	SSS
-	GFE	->	NVT
-	TS	->	NVT
-	SSS	->	NT
+	/* Week 9 */
+	GFE	->	BST
+	T8	->	TF
+	TF	->	NT
+	T8	->	NVT
+	TS	->	GFE
+	SSS	->	BST
 }
