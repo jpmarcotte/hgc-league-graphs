@@ -56,32 +56,24 @@ digraph EU {
 	TS	[image="tempo-storm.png" style=filled fillcolor=blue];
 	GFE	[image="gale-force-esports.png"];
 	NOM	[image="nomia.png"]
-/*
-	INF	[image="infamous.png"]
-*/
+//	INF	[image="infamous.png"]
 
 	/* Upper Bracket: Round 1 */
 	TL	->	NOM	[ color="blue:gray" ]
 	DIG	->	T8	[ color="blue:gray" ]
-/*
-	TS	->	INF	[ color="blue:blue" ]
-*/
+//	TS	->	INF	[ color="blue:blue" ]
 	FNC	->	GFE	[ color="blue:blue" ]
 
 	/* Lower Bracket: Round 1 */
-/*
-	T8	->	NOM	[ color="blue:gray" ]
-	GFE	->	INF	[ color="blue:blue" ]
-*/
+//	T8	->	NOM	[ color="blue:gray" ]
+//	GFE	->	INF	[ color="blue:blue" ]
 	
 	/* Upper Bracket: Round 2 */
 	TL	->	DIG	[ color="blue:blue:blue" ]
 	FNC	->	TS	[ color="blue:blue:blue" ]
 
 	/* Lower Bracket: Round 2 */
-/*
-	T8	->	TS	[ color="gray:blue:gray" ]
-*/
+//	T8	->	TS	[ color="gray:blue:gray" ]
 	DIG	->	GFE	[ color="blue:blue:blue" ]
 
 	/* Upper Bracket: Round 3 */
