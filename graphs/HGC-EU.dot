@@ -16,7 +16,7 @@ digraph EU {
 	SNG	->	BEG		[ color="black:gray:black" ]
 	FNC	->	TRC		[ color="black:gray:black" ]
 	EXP	->	TRC		[ color="black:black:black" ]
-	TL	->	FNC		[ color="gray:black:gray" ]
+	TL	->	FNC		[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint=false ]
 
 	/* Week 2 */
 	DIG	->	SNG		[ color="black:black:black" ]
@@ -91,7 +91,7 @@ digraph EU {
 	DIG	->	T8	[ color="blue:blue:blue" ]
 
 	/* Upper Bracket: Round 4 */
-	DIG	->	FNC	[ color="gray:blue:gray" ]
+	DIG	->	FNC	[ /*color="gray:blue:gray"*/ color="gray:red:gray" constraint=false ]
 
 	/* Lower Bracket: Round 4 */
 	DIG	->	TL	[ color="gray:blue:gray" ]
@@ -119,15 +119,21 @@ digraph EU {
 	EXP	->	BEG	[ color="green:green:green" ]
 	FNC	->	TL	[ color="gray:green:gray" ]
 	DIG	->	TL	[ color="gray:green:gray" ]
-	BEG	->	PD	[ color="green:gray:green" ]
+	BEG	->	PD	[ /*color="green:gray:green"*/ color="red:gray:red" constraint=false ]
+
+	/* Week 9 */
+	FNC	->	TRC	[ color="green:green:green" ]
+	EXP	->	SNG	[ color="green:green:green" ]
+	PD	->	SNG	[ color="green:gray:green" ]
+	EXP	->	TL	[ color="green:gray:green" ]
+	FNC	->	DIG	[ color="gray:green:gray" ]
+	BEG	->	TRC	[ color="green:green:green" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 9 */
-	FNC	->	TRC
-	EXP	->	SNG
-	PD	->	SNG
-	TL	->	EXP
-	FNC	->	DIG
-	TRC	->	BEG
+	/* Week 10 */
+	FNC	->	SNG
+	TL	->	BEG
+	DIG	->	TRC
+	EXP	->	PD
 }

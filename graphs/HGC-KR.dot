@@ -44,7 +44,7 @@ digraph KR {
 	/* Week 4 */
 	L5	->	MVPB		[ color="black:black:black" ]
 	TP	->	RVN		[ color="black:black:black" ]
-	GG	->	MVPM		[ color="gray:black:gray" ]
+	GG	->	MVPM		[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint=false ]
 	MTY	->	BLS		[ color="gray:black:gray" ]
 
 	/*** Eastern Clash ***/
@@ -117,13 +117,20 @@ digraph KR {
 	BLS	->	RVN	[ color="green:green:green" ]
 	MVPM	->	GG	[ color="gray:green:gray" ]
 
+	/* Week 9 */
+	L5	->	BLS	[ color="green:green:green" ]
+	MVPB	->	RVN	[ color="green:green:green" ]
+	MVPM	->	MTY	[ color="gray:green:gray" ]
+	TP	->	GG	[ color="green:gray:green" ]
+	MTY	->	TP	[ color="green:gray:green" ]
+	L5	->	MVPB	[ col0r="gray:green:gray" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 9 */
-	L5	->	BLS
-	MVPB	->	RVN
-	MVPM	->	MTY
-	TP	->	GG
-	TP	->	MTY
-	L5	->	MVPB
+	/* Week 10 */
+	MVPB	->	GG
+	L5	->	MVPM
+	MTY	->	BLS
+	TP	->	RVN
+
 }
