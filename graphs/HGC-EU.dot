@@ -1,5 +1,5 @@
 digraph EU {
-	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	node [shape=circle fixedsize=true width=.75 label="" color="white" margin=0.5];
 	imagepath="logos/";
 	TL	[image="liquid.png" style="filled" fillcolor="blue"];
 	FNC	[image="fnatic.png"];

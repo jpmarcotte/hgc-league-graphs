@@ -1,5 +1,5 @@
 digraph NA {
-	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	node [shape=circle fixedsize=true width=.75 label="" color="white" margin=0.5];
 	imagepath="logos/";
 	T8	[image="team-8.png"];
 	TS	[image="tempo-storm.png" style=filled fillcolor=blue];
