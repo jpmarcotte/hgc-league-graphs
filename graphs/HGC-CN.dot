@@ -1,6 +1,6 @@
 // vim: set ts=5 sw=5:
 digraph CN {
-	node [shape=circle fixedsize=true width=.75 label="" color="white" margin=0.5];
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
 	imagepath="logos/";
 	eStar	[ image="estar-gaming.png" ]
 	SPT	[ image="super-perfect-team.png" ]
@@ -50,6 +50,13 @@ digraph CN {
 	/* Upper Bracket: Round 4 */
 	MVPB	->	L5	[ color="blue:gray:blue" ]
 
+	/* Week 5 */
+	/* Sourced from https://masterleague.net/tournament/stage/180/ */
+	eStar	->	SPT	[ color="green:gray:green" ]
+	RPG	->	SOA	[ color="green:green:green" ]
+	CE	->	XTeam	[ color="green:green:green" ]
+	HL	->	KIS	[ color="green:gray:green" ]
+
 	/* Week 6 */
 	XTeam	->	KIS	[ color="green:green:green" ]
 	CE	->	SOA	[ color="green:green:green" ]
@@ -74,11 +81,18 @@ digraph CN {
 	XTeam	->	SOA	[ color="green:green:green" ]
 	SPT	->	HL	[ color="green:gray:green" ]
 
+	/* Week 10 */
+	SPT	-> 	SOA	[ color="green:gray:green" ]
+	RPG	->	XTeam	[ color="gray:green:gray" ]
+	eStar	->	KIS	[ color="green:green:green" ]
+	CE	->	HL	[ color="green:green:green" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 10 */
-	SPT	-> 	SOA
-	XTeam	->	RPG
-	eStar	->	KIS
-	CE	->	HL
+	/* Week 11 */
+	CE	->	KIS
+	eStar	->	SOA
+	RPG	->	HL
+	SPT	->	XTeam
+
 }

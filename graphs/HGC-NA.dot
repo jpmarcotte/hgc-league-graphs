@@ -1,5 +1,5 @@
 digraph NA {
-	node [shape=circle fixedsize=true width=.75 label="" color="white" margin=0.5];
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
 	imagepath="logos/";
 	T8	[image="team-8.png"];
 	TS	[image="tempo-storm.png" style=filled fillcolor=blue];
@@ -37,7 +37,7 @@ digraph NA {
 	/* Week 4 */
 	TS	->	NT			[ color="black:black:black" ]
 	SSS	->	NVT			[ color="black:black:black" ]
-	BST	->	SSS			[ color="gray:black:gray" ]
+	BST	->	SSS			[ /*color="gray:black:gray"*/ color="gray:red:gray" constriant=false ]
 	T8	->	NVT			[ color="black:black:black" ]
 	GFE	->	TS			[ /*color="black:black:black"*/ color="red:red:red" constraint=false ]
 	NT	->	TF			[ /*color="black:gray:black"*/ color="red:gray:red" constraint=false ]
@@ -102,7 +102,7 @@ digraph NA {
 	GFE	->	SSS	[ color="green:green:green" ]
 	BST	->	TF	[ color="green:gray:green" ]
 	NT	->	GFE	[ color="gray:red:gray" constraint=false ]
-	BST	->	T8	[ color="gray:green:gray" ]
+	BST	->	T8	[ /*color="gray:green:gray"*/ color="gray:red:gray" constraint=false ]
 	TS	->	SSS	[ color="green:gray:green" ]
 	TF	->	NVT	[ color="green:green:green" ]
 
@@ -122,12 +122,13 @@ digraph NA {
 	TS	->	GFE	[ color="green:gray:green" ]
 	SSS	->	BST	[ color="green:gray:green" ]
 
+	/* Week 10 */
+	GFE	->	TF	[ color="green:green:green" ]
+	SSS	->	NVT	[ color="green:gray:green" ]
+	TS	->	BST	[ color="green:green:green" ]
+	T8	->	NT	[ color="green:gray:green" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 10 */
-	GFE	->	TF
-	SSS	->	NVT
-	TS	->	BST
-	T8	->	NT
 	
 }

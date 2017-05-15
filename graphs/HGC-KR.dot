@@ -1,6 +1,6 @@
 // vim: set ts=5 sw=5:
 digraph KR {
-	node [shape=circle fixedsize=true width=.75 label="" color="white" margin=0.5];
+	node [shape=circle fixedsize=true width=0.75 label="" color="white"];
 	imagepath="logos/";
 	L5	[ image="l5.png" ]
 	MVPB	[ image="mvp-black.png" ]
@@ -112,17 +112,18 @@ digraph KR {
 	/* Week 9 */
 	L5	->	BLS	[ color="green:green:green" ]
 	MVPB	->	RVN	[ color="green:green:green" ]
-	MVPM	->	MTY	[ color="gray:green:gray" ]
+	MVPM	->	MTY	[ /*color="gray:green:gray"*/ color="gray:red:gray" constraint=false ]
 	TP	->	GG	[ color="green:gray:green" ]
 	MTY	->	TP	[ color="green:gray:green" ]
-	L5	->	MVPB	[ col0r="gray:green:gray" ]
+	L5	->	MVPB	[ color="gray:green:gray" ]
+
+	/* Week 10 */
+	MVPB	->	GG	[ color="green:gray:green" ]
+	L5	->	MVPM	[ color="green:gray:green" ]
+	MTY	->	BLS	[ color="green:gray:green" ]
+	RVN	->	TP	[ /*color="green:gray:green"*/ color="red:gray:red" constriant=false ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 10 */
-	MVPB	->	GG
-	L5	->	MVPM
-	MTY	->	BLS
-	TP	->	RVN
 
 }

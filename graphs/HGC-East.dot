@@ -1,7 +1,7 @@
 // vim: set ts=5 sw=5:
 digraph East {
 
-	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	node [shape=circle fixedsize=true width=.5 label="" color="white"];
 	imagepath="logos/";
 
 	subgraph KR {

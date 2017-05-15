@@ -1,5 +1,5 @@
 digraph EU {
-	node [shape=circle fixedsize=true width=.75 label="" color="white" margin=0.5];
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
 	imagepath="logos/";
 	TL	[image="liquid.png" style="filled" fillcolor="blue"];
 	FNC	[image="fnatic.png"];
@@ -95,13 +95,13 @@ digraph EU {
 	SNG	->	BEG	[ color="green:gray:green" ]
 	DIG	->	PD	[ color="green:green:green" ]
 	TL	->	PD	[ color="gray:green:gray" ]
-	EXP	->	DIG	[ color="gray:green:gray" ]
+	EXP	->	DIG	[ /*color="gray:green:gray"*/ color="gray:red:gray" constraint=false ]
 
 	/* Week 7 */
 	FNC	->	BEG	[ color="green:green:green" ]
 	TRC	->	SNG	[ color="gray:green:gray" ]
 	FNC	->	PD	[ color="green:green:green" ]
-	TRC	->	EXP	[ color="green:gray:green" ]
+	TRC	->	EXP	[ /*color="green:gray:green"*/ color="red:gray:red" constraint=false ]
 	DIG	->	BEG	[ color="green:green:green" ]
 	TL	->	SNG	[ color="green:green:green" ]
 
@@ -117,15 +117,16 @@ digraph EU {
 	FNC	->	TRC	[ color="green:green:green" ]
 	EXP	->	SNG	[ color="green:green:green" ]
 	PD	->	SNG	[ color="green:gray:green" ]
-	EXP	->	TL	[ color="green:gray:green" ]
+	EXP	->	TL	[ /*color="green:gray:green"*/ color="red:gray:red" constraint=false ]
 	FNC	->	DIG	[ color="gray:green:gray" ]
-	BEG	->	TRC	[ color="green:green:green" ]
+	BEG	->	TRC	[ /*color="green:green:green"*/ color="red:red:red" constraint=false ]
+
+	/* Week 10 */
+	FNC	->	SNG	[ color="green:green:green" ]
+	TL	->	BEG	[ color="green:green:green" ]
+	DIG	->	TRC	[ color="gray:green:gray" ]
+	EXP	->	PD	[ color="green:green:green" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 10 */
-	FNC	->	SNG
-	TL	->	BEG
-	DIG	->	TRC
-	EXP	->	PD
 }

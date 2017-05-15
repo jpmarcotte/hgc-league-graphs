@@ -1,5 +1,5 @@
 digraph West {
-	node [shape=circle fixedsize=true width=.5 label="" color="white" margin=0.5];
+	node [shape=circle fixedsize=true width=.5 label="" color="white"];
 	imagepath="logos/";
 
 	NOM	[image="nomia.png"]
