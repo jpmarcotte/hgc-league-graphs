@@ -87,12 +87,12 @@ digraph CN {
 	eStar	->	KIS	[ color="green:green:green" ]
 	CE	->	HL	[ color="green:green:green" ]
 
-	edge [ color="gray" dir="none" constraint="false" style="dashed"]
-
 	/* Week 11 */
-	CE	->	KIS
-	eStar	->	SOA
-	RPG	->	HL
-	SPT	->	XTeam
+	CE	->	KIS	[ color="green:green:green" ]
+	eStar	->	SOA	[ color="green:green:green" ]
+	HL	->	RPG	[ color="green:gray:green" ]
+	SPT	->	XTeam	[ color="green:green:green" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
 }
