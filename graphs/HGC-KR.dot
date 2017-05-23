@@ -123,7 +123,12 @@ digraph KR {
 	MTY	->	BLS	[ color="green:gray:green" ]
 	RVN	->	TP	[ /*color="green:gray:green"*/ color="red:gray:red" constriant=false ]
 
-	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+	/* Playoffs */
+	MVPM	->	GG	[ color="purple:gray:purple" ]
+	MVPM	->	TP	[ color="purple:gray:purple" ]
+	MVPM	->	MTY	[ color="purple:gray:purple" ]
+	MVPB	->	MVPM	[ color="purple:purple:purple" ]
 
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
 }

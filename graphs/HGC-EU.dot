@@ -127,6 +127,12 @@ digraph EU {
 	DIG	->	TRC	[ color="gray:green:gray" ]
 	EXP	->	PD	[ color="green:green:green" ]
 
+	/* Playoffs */
+	TRC	->	PD	[ color="purple:purple:purple" ]
+	EXP	->	TRC	[ color="gray:purple:gray" ]
+	DIG	->	EXP	[ color="purple:gray:purple" ]
+	DIG	->	TL	[ color="purple:gray:purple" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
 }

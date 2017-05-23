@@ -128,7 +128,12 @@ digraph NA {
 	TS	->	BST	[ color="green:green:green" ]
 	T8	->	NT	[ color="green:gray:green" ]
 
-	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+	/* Playoffs */
+	TF	->	BST	[ color="purple:gray:purple" ]
+	TF	->	SSS	[ color="purple:purple:purple" ]
+	T8	->	TF	[ color="purple:purple:purple" ]
+	T8	->	GFE	[ color="purple:gray:purple" ]
 
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 	
 }
