@@ -4,25 +4,25 @@ digraph MidSeasonBrawl {
 	imagepath="logos/";
 
 	subgraph Group1 {
-		DK	[ image="placeholder.png" ]
-		T8	[ image="team-8.png" ]
+		DK	[ image="deadly-kittens.png" ]
+		R2E	[ image="roll20.png" ]
 		FNC	[ image="fnatic.png" ]
-		CE	[ image="ce.png" ]
-		NOM	[ image="nomia.png" ]
+		SPT	[ image="super-perfect-team.png" ]
+		NM	[ image="nomia.png" ]
 		MVPB	[ image="mvp-black.png" ]
 	}
 
 	subgraph Group2 {
-		ST	[ image="soul-torturers.png" ]
+		EGST	[ image="soul-torturers.png" ]
 		DIG	[ image="dignitas.png" ]
-		RED	[ image="red-canids.png" ]
+		RDC	[ image="red-canids.png" ]
 		eStar	[ image="estar-gaming.png" ]
 		L5	[ image="l5.png"]
 		TS	[ image="tempo-storm.png" style="filled" fillcolor="blue" ]
 	}
 
 	/* NA Week 3 */
-	TS	->	T8	[ color="gray:black:gray" ]
+	TS	->	R2E	[ color="gray:black:gray" ]
 
 	/* Korea Week 4 */
 	L5	->	MVPB	[ color="black:black:black" ]
@@ -31,22 +31,25 @@ digraph MidSeasonBrawl {
 	FNC	->	DIG	[ color="gray:black:gray" ]
 	
 	/* Western Clash Upper Bracket Round 1 */
-	DIG	->	T8	[ color="blue:gray" ]
+	DIG	->	R2E	[ color="blue:gray" ]
 
 	/* Western Clash Lower Bracket Round 1 */
-	T8	->	NOM	[ color="blue:gray" ]
+	R2E	->	NM	[ color="blue:gray" ]
 
 	/* Western Clash Upper Bracket Round 2 */
 	FNC	->	TS	[ color="blue:blue:blue" ]
 
 	/* Western Clash Lower Bracket Round 2 */
-	T8	->	TS	[ color="gray:blue:gray" ]
+	R2E	->	TS	[ color="gray:blue:gray" ]
 
 	/* Western Clash Lower Bracket Round 3 */
-	DIG	->	T8	[ color="blue:blue:blue" ]
+	DIG	->	R2E	[ color="blue:blue:blue" ]
 
 	/* Western Clash Upper Bracket Round 4 */
 	DIG	->	FNC	[ color="gray:blue:gray" ]
+
+	/* Eastern Clash Upper Bracket Round 1 */
+	MVPB	->	SPT	[ color="blue:blue" ]
 
 	/* Eastern Clash Upper Bracket Round 2 */
 	MVPB	->	eStar	[ color="gray:blue:gray" ]
@@ -57,15 +60,28 @@ digraph MidSeasonBrawl {
 	/* Eastern Clash Upper Bracket Round 4 */
 	MVPB	->	L5	[ color="blue:gray:blue" ]
 
-	/* NA Week 6 */
-	TS	->	T8	[ color="green:green:green" ]
+	/* CN Week 5 */
+	eStar	->	SPT	[ color="green:gray:green" ]
 
-	/* China Week 9 */
-	CE	->	eStar	[ color="green:green:green" ]
+	/* NA Week 6 */
+	TS	->	R2E	[ color="green:green:green" ]
 
 	/* Korea Week 9 */
 	L5	->	MVPB	[ color="gray:green:gray" ]
 
 	/* EU Week 9 */
 	FNC	->	DIG	[ color="gray:green:gray" ]
+
+	/* Mid Season Brawl */
+
+	/* Round 1 */
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+	FNC	->	DK
+	SPT	->	NM
+	MVPB	->	R2E
+	TS	->	RDC
+	L5	->	EGST
+	DIG	->	eStar
+	
 }
