@@ -3,5 +3,6 @@ for f in graphs/*.dot
 do
 	p=${f%.dot}
 	p=${p#graphs/}
+	echo "dot -Tpng \"$f\" -o \"renders/$p.png\""
 	dot -Tpng "$f" -o "renders/$p.png"
 done

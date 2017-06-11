@@ -3,7 +3,8 @@ digraph MidSeasonBrawl {
 	node [shape=circle fixedsize=true width=.5 label="" color="white"];
 	imagepath="logos/";
 
-	subgraph Group1 {
+	subgraph clusterGroupA {
+		rank="sink"
 		DK	[ image="deadly-kittens.png" ]
 		R2E	[ image="roll20.png" ]
 		FNC	[ image="fnatic.png" ]
@@ -12,7 +13,8 @@ digraph MidSeasonBrawl {
 		MVPB	[ image="mvp-black.png" ]
 	}
 
-	subgraph Group2 {
+	subgraph clusterGroupB {
+		rank=same
 		EGST	[ image="soul-torturers.png" ]
 		DIG	[ image="dignitas.png" ]
 		RDC	[ image="red-canids.png" ]
@@ -22,55 +24,55 @@ digraph MidSeasonBrawl {
 	}
 
 	/* NA Week 3 */
-	TS	->	R2E	[ color="gray:black:gray" ]
+//	TS	->	R2E	[ color="gray:black:gray" ]
 
 	/* Korea Week 4 */
-	L5	->	MVPB	[ color="black:black:black" ]
+//	L5	->	MVPB	[ color="black:black:black" ]
 
 	/* EU Week 4 */
-	FNC	->	DIG	[ color="gray:black:gray" ]
+//	FNC	->	DIG	[ color="gray:black:gray" ]
 	
 	/* Western Clash Upper Bracket Round 1 */
-	DIG	->	R2E	[ color="blue:gray" ]
+//	DIG	->	R2E	[ color="blue:gray" ]
 
 	/* Western Clash Lower Bracket Round 1 */
 	R2E	->	NM	[ color="blue:gray" ]
 
 	/* Western Clash Upper Bracket Round 2 */
-	FNC	->	TS	[ color="blue:blue:blue" ]
+//	FNC	->	TS	[ color="blue:blue:blue" ]
 
 	/* Western Clash Lower Bracket Round 2 */
-	R2E	->	TS	[ color="gray:blue:gray" ]
+//	R2E	->	TS	[ color="gray:blue:gray" ]
 
 	/* Western Clash Lower Bracket Round 3 */
-	DIG	->	R2E	[ color="blue:blue:blue" ]
+//	DIG	->	R2E	[ color="blue:blue:blue" ]
 
 	/* Western Clash Upper Bracket Round 4 */
-	DIG	->	FNC	[ color="gray:blue:gray" ]
+//	DIG	->	FNC	[ color="gray:blue:gray" ]
 
 	/* Eastern Clash Upper Bracket Round 1 */
 	MVPB	->	SPT	[ color="blue:blue" ]
 
 	/* Eastern Clash Upper Bracket Round 2 */
-	MVPB	->	eStar	[ color="gray:blue:gray" ]
+//	MVPB	->	eStar	[ color="gray:blue:gray" ]
 
 	/* Eastern Clash Upper Bracket Round 3 */
-	MVPB	->	L5	[ color="gray:blue:gray" ]
+//	MVPB	->	L5	[ color="gray:blue:gray" ]
 
 	/* Eastern Clash Upper Bracket Round 4 */
-	MVPB	->	L5	[ color="blue:gray:blue" ]
+//	MVPB	->	L5	[ color="blue:gray:blue" ]
 
 	/* CN Week 5 */
-	eStar	->	SPT	[ color="green:gray:green" ]
+//	eStar	->	SPT	[ color="green:gray:green" ]
 
 	/* NA Week 6 */
-	TS	->	R2E	[ color="green:green:green" ]
+//	TS	->	R2E	[ color="green:green:green" ]
 
 	/* Korea Week 9 */
-	L5	->	MVPB	[ color="gray:green:gray" ]
+//	L5	->	MVPB	[ color="gray:green:gray" ]
 
 	/* EU Week 9 */
-	FNC	->	DIG	[ color="gray:green:gray" ]
+//	FNC	->	DIG	[ color="gray:green:gray" ]
 
 	/* Mid Season Brawl */
 
@@ -83,6 +85,18 @@ digraph MidSeasonBrawl {
 	L5	->	EGST	[ color="purple:purple" ]
 	eStar	->	DIG	[ color="purple:purple" ]
 
-	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+	/* Round 2 */
+
+	FNC	->	NM	[ color="purple:purple" ]
+	R2E	->	DK	[ color="purple:purple" ]
+	MVPB	->	SPT	[ color="purple:purple" ]
+
+	TS	->	EGST [ color="purple:gray" dir="none" constraint="false" ]
+	eStar	->	RDC [ color="purple:purple" ]
+	DIG	->	L5	[ color="purple:purple" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed" ]
+
+
 	
 }
