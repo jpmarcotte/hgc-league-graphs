@@ -76,12 +76,13 @@ digraph MidSeasonBrawl {
 
 	/* Round 1 */
 
+	FNC	->	DK	[ color="purple:purple" ]
+	NM	->	SPT	[ color="purple:purple" ]
+	MVPB	->	R2E	[ color="purple:gray" dir="none" constraint="false" ]
+	TS	->	RDC	[ color="purple:purple" ]
+	L5	->	EGST	[ color="purple:purple" ]
+	eStar	->	DIG	[ color="purple:purple" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
-	FNC	->	DK
-	SPT	->	NM
-	MVPB	->	R2E
-	TS	->	RDC
-	L5	->	EGST
-	DIG	->	eStar
 	
 }

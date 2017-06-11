@@ -2,20 +2,22 @@ digraph legend {
 	node [ shape="none" label="" ] 
 	rankdir="LR";
 
-	w	->	x	[ color="gray" style="dashed" dir="none" label="Not yet played" ]
-	u	->	v	[ color="blue"	label="Mid Season Clash" ]
-	s	->	t	[ color="red"	label="Season Anomaly?" ]
-	q	->	r	[ color="green" label="Season Game: 2nd Half" ]
-	o	->	p	[ color="black" label="Season Game: 1st Half" ]
+	1	->	2	[ color="gray"	label="Not yet played" style="dashed" dir="none" ]
+	y	->	z	[ color="purple"	label="Mid Season Brawl" ]
+	w	->	x	[ color="blue"	label="Regional Clash" ]
+	u	->	v	[ color="red"	label="Season Anomaly?" ]
+	s	->	t	[ color="green"	label="Season Game: 2nd Half" ]
+	q	->	r	[ color="black"	label="Season Game: 1st Half" ]
 
-	m	->  n	[ color="white" label="Color"]
+	o	->	p	[ color="white" label="Color"]
 
-	k	->	l	[ color="black:gray" label="Best of 3: 2-1" ]
-	i	->	j	[ color="black:black" label="Best of 3: 2-0" ]
+	i	->	j	[ color="black:gray"	label="Best of 2 : 1-1" dir="none" ]
+	m	->	n	[ color="black:gray"	label="Best of 3: 2-1" ]
+	k	->	l	[ color="black:black"	label="Best of 3 or 2: 2-0" ]
 
-	c	->	d	[ color="gray:black:gray" label="Best of 5: 3-2" ]
-	e	->	f	[ color="black:gray:black" label="Best of 5: 3-1" ]
-	g	->	h	[ color="black:black:black" label="Best of 5: 3-0" ]
+	c	->	d	[ color="gray:black:gray"	label="Best of 5: 3-2" ]
+	e	->	f	[ color="black:gray:black"	label="Best of 5: 3-1" ]
+	g	->	h	[ color="black:black:black"	label="Best of 5: 3-0" ]
 
 	a [ label="Winner" ]
 	b [ label="Loser" ]
