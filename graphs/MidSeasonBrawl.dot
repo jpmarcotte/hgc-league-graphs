@@ -104,7 +104,21 @@ digraph MidSeasonBrawl {
 	SPT	->	DK	[ color="purple:gray" dir="none" constraint="false" ]
 	MVPB	->	DK	[ color="purple:purple" ]
 
+	/* Round 4 */
+	NM	->	DK	[ color="purple:gray" dir="none" constraint="false" ]
+	MVPB	->	FNC	[ color="purple:purple" ]
+	R2E	->	SPT	[ color="purple:purple" ]
+	eStar	->	L5	[ color="purple:gray" dir="none" constraint="false" ]
+	DIG	->	TS	[ color="purple:gray" dir="none" constraint="false" ]
+	EGST	->	RDC	[ color="purple:purple" ]
+	DIG	->	RDC	[ color="purple:purple" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed" ]
+
+	R2E	->	NM
+	FNC	->	SPT
+	TS	->	L5
+	eStar	->	EGST
 
 
 }
