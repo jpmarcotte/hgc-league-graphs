@@ -3,8 +3,8 @@ digraph MidSeasonBrawl {
 	node [shape=circle fixedsize=true width=.5 label="" color="white"];
 	imagepath="logos/";
 
-	subgraph clusterGroupA {
-		rank="sink"
+	subgraph cluster_GroupA {
+		color="none"
 		DK	[ image="deadly-kittens.png" ]
 		R2E	[ image="roll20.png" ]
 		FNC	[ image="fnatic.png" ]
@@ -13,8 +13,8 @@ digraph MidSeasonBrawl {
 		MVPB	[ image="mvp-black.png" ]
 	}
 
-	subgraph clusterGroupB {
-		rank=same
+	subgraph cluster_GroupB {
+		color="none"
 		EGST	[ image="soul-torturers.png" ]
 		DIG	[ image="dignitas.png" ]
 		RDC	[ image="red-canids.png" ]
@@ -24,7 +24,7 @@ digraph MidSeasonBrawl {
 	}
 
 	/* NA Week 3 */
-//	TS	->	R2E	[ color="gray:black:gray" ]
+	TS	->	R2E	[ color="gray:black:gray" ]
 
 	/* Korea Week 4 */
 //	L5	->	MVPB	[ color="black:black:black" ]
@@ -42,7 +42,7 @@ digraph MidSeasonBrawl {
 //	FNC	->	TS	[ color="blue:blue:blue" ]
 
 	/* Western Clash Lower Bracket Round 2 */
-//	R2E	->	TS	[ color="gray:blue:gray" ]
+	R2E	->	TS	[ color="gray:blue:gray" ]
 
 	/* Western Clash Lower Bracket Round 3 */
 //	DIG	->	R2E	[ color="blue:blue:blue" ]
@@ -66,7 +66,7 @@ digraph MidSeasonBrawl {
 //	eStar	->	SPT	[ color="green:gray:green" ]
 
 	/* NA Week 6 */
-//	TS	->	R2E	[ color="green:green:green" ]
+	TS	->	R2E	[ color="green:green:green" ]
 
 	/* Korea Week 9 */
 //	L5	->	MVPB	[ color="gray:green:gray" ]
@@ -99,6 +99,7 @@ digraph MidSeasonBrawl {
 	/* Round 3 */
 	L5	->	RDC	[ color="purple:purple" ]
 	DIG	->	EGST	[ color="purple:purple" ]
+	eStar	->	TS	[ color="purple:purple" ]
 	FNC	->	R2E	[ color="purple:purple" ]
 	MVPB	->	NM	[ color="purple:purple" ]
 	SPT	->	DK	[ color="purple:gray" dir="none" constraint="false" ]
@@ -113,12 +114,26 @@ digraph MidSeasonBrawl {
 	EGST	->	RDC	[ color="purple:purple" ]
 	DIG	->	RDC	[ color="purple:purple" ]
 
+	/* Round 5 */
+	R2E	->	NM	[ color="purple:gray" dir="none" constraint="false" ]
+	FNC	->	SPT	[ color="purple:purple" ]
+	L5	->	TS	[ color="purple:purple" ]
+	eStar	->	EGST	[ color="purple:gray" dir="none" constraint="false" ]
+
+	/* Tiebreakers */
+	DIG	->	L5	[ color="purple" ]
+	TS	->	EGST	[ color="purple" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed" ]
 
-	R2E	->	NM
-	FNC	->	SPT
-	TS	->	L5
-	eStar	->	EGST
+	/* Upper Bracket Round 1 */
+	DIG	->	MVPB
+	FNC	->	eStar
+
+	/* Lower Bracket Round 1 */
+	TS	->	R2E
+	L5	->	NM
+
 
 
 }
