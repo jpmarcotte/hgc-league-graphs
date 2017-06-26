@@ -1,0 +1,34 @@
+// vim: set ts=5 sw=5:
+digraph CN {
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
+	imagepath="logos/";
+	CE	[ image="ce.png" ]
+	eStar	[ image="estar-gaming.png" ]
+	RPG	[ image="rpg.png" ]
+	SOA	[ image="start-over-again.png" ]
+	HL	[ image="hots-lady.png" ]
+	SPT	[ image="super-perfect-team.png" ]
+	KT	[ image="kt.png" style="filled" color="gray" ]
+	WKG	[ image="wkg.png" ]
+
+	/* Phase 1 Aggregates */
+	CE	->	eStar	[ color="gray:gray:gray" ]
+	CE	->	RPG	[ color="gray:gray" ]
+	CE	->	SOA	[ color="gray:gray:gray" ]
+	CE	->	HL	[ color="gray:gray:gray" ]
+	SPT	->	CE	[ color="gray" ]
+	eStar	->	RPG	[ color="gray:gray:gray" ]
+	eStar	->	SOA	[ color="gray:gray:gray" ]
+	eStar	->	HL	[ color="gray:gray:gray" ]
+	eStar	->	SPT	[ color="gray:gray" ]
+	RPG	->	SOA	[ color="gray:gray:gray" ]
+	HL	->	RPG	[ color="gray:gray" ]
+	SPT	->	RPG	[ color="gray:gray:gray" ]
+	HL	->	SOA	[ color="gray:gray:gray" ]
+	SPT	->	SOA	[ color="gray:gray" ]
+	SPT	->	HL	[ color="gray:gray" ]
+	
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+}

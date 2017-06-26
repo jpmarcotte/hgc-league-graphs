@@ -1,0 +1,39 @@
+digraph NA {
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
+	{ rank=same GFE R2E TS }
+	imagepath="logos/";
+	GFE	[ image="gale-force-esports.png" ];
+	NT	[ image="no-tomorrow.png" ];
+	TS	[ image="tempo-storm.png" style=filled fillcolor=blue ];
+	TF	[ image="team-freedom.png" ];
+	R2E	[ image="roll20.png" ];
+	SSS	[ image="superstars.png" ];
+	NVT	[ image="naventic.png" ];
+	EID	[ image="even-in-death.png" ];
+
+	/* Phase 1 Aggregates */
+	GFE	->	NT	[ color="gray:gray" ]
+	GFE	->	TS	[ color="gray" ]
+	GFE	->	TF	[ color="gray:gray" ]
+	R2E	->	GFE	[ color="gray" ]
+	GFE	->	SSS	[ color="gray:gray:gray" ]
+	GFE	->	NVT	[ color="gray:gray:gray" ]
+	TS	->	NT	[ color="gray:gray:gray" ]
+	TF	->	NT	[ color="gray" ]
+	R2E	->	NT	[ color="gray:gray" ]
+	SSS	->	NT	[ color="gray:gray" ]
+	NT	->	NVT	[ color="gray" ]
+	TS	->	TF	[ color="gray:gray" ]
+	TS	->	R2E	[ color="gray" ]
+	TS	->	SSS	[ color="gray:gray" ]
+	TS	->	NVT	[ color="gray" ]
+	R2E	->	TF	[ color="gray:gray:gray" ]
+	TF	->	SSS	[ color="gray" ]
+	TF	->	NVT	[ color="gray:gray:gray" ]
+	R2E	->	SSS	[ color="gray:gray:gray" ]
+	R2E	->	NVT	[ color="gray:gray:gray" ]
+	SSS	->	NVT	[ color="gray:gray" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+	
+}

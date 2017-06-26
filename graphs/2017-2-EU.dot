@@ -1,0 +1,32 @@
+digraph EU {
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
+	imagepath="logos/";
+	TL	[ image="liquid.png" style="filled" fillcolor="blue" ];
+	FNC	[ image="fnatic.png" ];
+	TRC	[ image="tricked.png" ];
+	PD	[ image="playing-ducks.png" ];
+	EXP	[ image="expert.png" ];
+	DIG	[ image="dignitas.png" ];
+	ZE	[ image="zealots.png" ];
+	TGG	[ image="team-good-guys.png" ];
+
+	/* Phase 1 Aggregates */
+	FNC	->	TL	[ color="gray" ]
+	TL	->	TRC	[ color="gray" ]
+	TL	->	PD	[ color="gray" ]
+	TL	->	EXP	[ color="gray" ]
+	TL	->	DIG	[ color="gray" ]
+	FNC	->	TRC	[ color="gray:gray:gray" ]
+	FNC	->	PD	[ color="gray:gray:gray" ]
+	FNC	->	EXP	[ color="gray:gray" ]
+	FNC	->	DIG	[ color="gray" ]
+	TRC	->	PD	[ color="gray" ]
+	EXP	->	TRC	[ color="gray" ]
+	DIG	->	TRC	[ color="gray:gray" ]
+	EXP	->	PD	[ color="gray:gray:gray" ]
+	DIG	->	PD	[ color="gray:gray:gray" ]
+	DIG	->	EXP	[ color="gray" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+}

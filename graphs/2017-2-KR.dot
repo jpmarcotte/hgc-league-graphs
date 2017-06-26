@@ -1,0 +1,39 @@
+// vim: set ts=5 sw=5:
+digraph KR {
+	node [shape=circle fixedsize=true width=0.75 label="" color="white"];
+	imagepath="logos/";
+	MVPM	[ image="mvp-miracle.png" ]
+	MTY	[ image="mighty.png" ]
+	TP	[ image="tempest.png" ]
+	BLS	[ image="blossom.png" ]
+	MVPB	[ image="mvp-black.png" ]
+	L5	[ image="l5.png" ]
+	RVN	[ image="raven.png" ]
+	RRR	[ image="rrr.png" ]
+
+	/* Phase 1 Aggregates */
+	MVPM	->	MTY	[ color="gray:gray" ]
+	TP	->	MVPM	[ color="gray" ]
+	MVPM	->	BLS	[ color="gray:gray" ]
+	MVPB	->	MVPM	[ color="gray:gray:gray" ]
+	L5	->	MVPM	[ color="gray:gray" ]
+	MVPM	->	RVN	[ color="gray:gray" ]
+	MTY	->	TP	[ color="gray" ]
+	MTY	->	BLS	[ color="gray:gray" ]
+	MVPB	->	MTY	[ color="gray:gray:gray" ]
+	L5	->	MTY	[ color="gray:gray:gray" ]
+	MTY	->	RVN	[ color="gray:gray:gray" ]
+	TP	->	BLS	[ color="gray:gray:gray" ]
+	MVPB	->	TP	[ color="gray:gray" ]
+	L5	->	TP	[ color="gray:gray" ]
+	TP	->	RVN	[ color="gray" ]
+	MVPB	->	BLS	[ color="gray:gray:gray" ]
+	L5	->	BLS	[ color="gray:gray:gray" ]
+	BLS	->	RVN	[ color="gray:gray:gray" ]
+	L5	->	MVPB	[ color="gray" ]
+	MVPB	->	RVN	[ color="gray:gray:gray" ]
+	L5	->	RVN	[ color="gray:gray:gray" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+}
