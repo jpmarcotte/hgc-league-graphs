@@ -15,17 +15,25 @@ digraph EU {
 	TL	->	TRC	[ color="gray" ]
 	TL	->	PD	[ color="gray" ]
 	TL	->	EXP	[ color="gray" ]
-	TL	->	DIG	[ color="gray" ]
+//	TL	->	DIG	[ color="gray" ]
 	FNC	->	TRC	[ color="gray:gray:gray" ]
 	FNC	->	PD	[ color="gray:gray:gray" ]
 	FNC	->	EXP	[ color="gray:gray" ]
 	FNC	->	DIG	[ color="gray" ]
-	TRC	->	PD	[ color="gray" ]
-	EXP	->	TRC	[ color="gray" ]
+//	TRC	->	PD	[ color="gray" ]
+//	EXP	->	TRC	[ color="gray" ]
 	DIG	->	TRC	[ color="gray:gray" ]
 	EXP	->	PD	[ color="gray:gray:gray" ]
 	DIG	->	PD	[ color="gray:gray:gray" ]
 	DIG	->	EXP	[ color="gray" ]
+
+	/* Week 1 */
+	TRC	->	EXP	[ color="gray:black:gray" ]
+	ZE	->	PD	[ color="black:black:black" ]
+	PD	->	TRC	[ color="black:gray:black" ]
+	TL	->	TGG	[ color="black:black:black" ]
+	FNC	->	ZE	[ color="black:black:black" ]
+	TL	->	DIG	[ color="black:black:black" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 

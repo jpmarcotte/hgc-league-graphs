@@ -12,23 +12,37 @@ digraph CN {
 	WKG	[ image="wkg.png" ]
 
 	/* Phase 1 Aggregates */
-	CE	->	eStar	[ color="gray:gray:gray" ]
-	CE	->	RPG	[ color="gray:gray" ]
-	CE	->	SOA	[ color="gray:gray:gray" ]
-	CE	->	HL	[ color="gray:gray:gray" ]
-	SPT	->	CE	[ color="gray" ]
-	eStar	->	RPG	[ color="gray:gray:gray" ]
-	eStar	->	SOA	[ color="gray:gray:gray" ]
-	eStar	->	HL	[ color="gray:gray:gray" ]
-	eStar	->	SPT	[ color="gray:gray" ]
-	RPG	->	SOA	[ color="gray:gray:gray" ]
-	HL	->	RPG	[ color="gray:gray" ]
-	SPT	->	RPG	[ color="gray:gray:gray" ]
-	HL	->	SOA	[ color="gray:gray:gray" ]
-	SPT	->	SOA	[ color="gray:gray" ]
-	SPT	->	HL	[ color="gray:gray" ]
+//	CE	->	eStar	[ color="lightgray:lightgray:lightgray" ]
+	CE	->	RPG	[ color="lightgray:lightgray" ]
+	CE	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+	CE	->	HL	[ color="lightgray:lightgray:lightgray" ]
+	SPT	->	CE	[ color="lightgray" ]
+	eStar	->	RPG	[ color="lightgray:lightgray:lightgray" ]
+	eStar	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+	eStar	->	HL	[ color="lightgray:lightgray:lightgray" ]
+	eStar	->	SPT	[ color="lightgray:lightgray" ]
+//	RPG	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+	HL	->	RPG	[ color="lightgray:lightgray" ]
+	SPT	->	RPG	[ color="lightgray:lightgray:lightgray" ]
+	HL	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+	SPT	->	SOA	[ color="lightgray:lightgray" ]
+//	SPT	->	HL	[ color="lightgray:lightgray" ]
 	
+	/* Week 1 */
+	KT	->	WKG	[ color="black:black" ]
+	RPG	->	SOA	[ color="black:black" ]
+	eStar	->	CE	[ color="black:gray" dir="none" constraint="false" ]
+	SPT	->	HL	[ color="black:gray" dir="none" constraint="false" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+	SPT	->	WKG
+	HL	->	SOA
+	eStar	->	KT
+	CE	->	RPG
+	SPT	->	KT
+	eStar	->	RPG
+	HL	->	CE
+	SOA	->	WKG
 
 }

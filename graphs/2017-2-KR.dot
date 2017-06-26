@@ -12,7 +12,7 @@ digraph KR {
 	RRR	[ image="rrr.png" ]
 
 	/* Phase 1 Aggregates */
-	MVPM	->	MTY	[ color="gray:gray" ]
+//	MVPM	->	MTY	[ color="gray:gray" ]
 	TP	->	MVPM	[ color="gray" ]
 	MVPM	->	BLS	[ color="gray:gray" ]
 	MVPB	->	MVPM	[ color="gray:gray:gray" ]
@@ -23,16 +23,24 @@ digraph KR {
 	MVPB	->	MTY	[ color="gray:gray:gray" ]
 	L5	->	MTY	[ color="gray:gray:gray" ]
 	MTY	->	RVN	[ color="gray:gray:gray" ]
-	TP	->	BLS	[ color="gray:gray:gray" ]
+//	TP	->	BLS	[ color="gray:gray:gray" ]
 	MVPB	->	TP	[ color="gray:gray" ]
 	L5	->	TP	[ color="gray:gray" ]
-	TP	->	RVN	[ color="gray" ]
+//	TP	->	RVN	[ color="gray" ]
 	MVPB	->	BLS	[ color="gray:gray:gray" ]
 	L5	->	BLS	[ color="gray:gray:gray" ]
-	BLS	->	RVN	[ color="gray:gray:gray" ]
+//	BLS	->	RVN	[ color="gray:gray:gray" ]
 	L5	->	MVPB	[ color="gray" ]
 	MVPB	->	RVN	[ color="gray:gray:gray" ]
 	L5	->	RVN	[ color="gray:gray:gray" ]
+
+	/* Week 1 */
+	MTY	->	RRR	[ color="black:black:black" ]
+	BLS	->	RVN	[ color="black:black:black" ]
+	TP	->	BLS	[ color="black:black:black" ]
+	MVPM	->	RRR	[ color="black:black:black" ]
+	MTY	->	MVPM	[ color="gray:black:gray" ]
+	TP	->	RVN	[ color="black:gray:black" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
