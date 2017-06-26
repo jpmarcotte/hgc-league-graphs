@@ -27,40 +27,40 @@ digraph MidSeasonBrawl {
 	TS	->	R2E	[ color="gray:black:gray" ]
 
 	/* Korea Week 4 */
-//	L5	->	MVPB	[ color="black:black:black" ]
+	L5	->	MVPB	[ color="black:black:black" ]
 
 	/* EU Week 4 */
-//	FNC	->	DIG	[ color="gray:black:gray" ]
+	FNC	->	DIG	[ color="gray:black:gray" ]
 	
 	/* Western Clash Upper Bracket Round 1 */
-//	DIG	->	R2E	[ color="blue:gray" ]
+	DIG	->	R2E	[ color="blue:gray" ]
 
 	/* Western Clash Lower Bracket Round 1 */
 	R2E	->	NM	[ color="blue:gray" ]
 
 	/* Western Clash Upper Bracket Round 2 */
-//	FNC	->	TS	[ color="blue:blue:blue" ]
+	FNC	->	TS	[ color="blue:blue:blue" ]
 
 	/* Western Clash Lower Bracket Round 2 */
 	R2E	->	TS	[ color="gray:blue:gray" ]
 
 	/* Western Clash Lower Bracket Round 3 */
-//	DIG	->	R2E	[ color="blue:blue:blue" ]
+	DIG	->	R2E	[ color="blue:blue:blue" ]
 
 	/* Western Clash Upper Bracket Round 4 */
-//	DIG	->	FNC	[ color="gray:blue:gray" ]
+	DIG	->	FNC	[ color="gray:blue:gray" ]
 
 	/* Eastern Clash Upper Bracket Round 1 */
 	MVPB	->	SPT	[ color="blue:blue" ]
 
 	/* Eastern Clash Upper Bracket Round 2 */
-//	MVPB	->	eStar	[ color="gray:blue:gray" ]
+	MVPB	->	eStar	[ color="gray:blue:gray" ]
 
 	/* Eastern Clash Upper Bracket Round 3 */
-//	MVPB	->	L5	[ color="gray:blue:gray" ]
+	MVPB	->	L5	[ color="gray:blue:gray" ]
 
 	/* Eastern Clash Upper Bracket Round 4 */
-//	MVPB	->	L5	[ color="blue:gray:blue" ]
+	MVPB	->	L5	[ color="blue:gray:blue" ]
 
 	/* CN Week 5 */
 //	eStar	->	SPT	[ color="green:gray:green" ]
@@ -69,10 +69,10 @@ digraph MidSeasonBrawl {
 	TS	->	R2E	[ color="green:green:green" ]
 
 	/* Korea Week 9 */
-//	L5	->	MVPB	[ color="gray:green:gray" ]
+	L5	->	MVPB	[ color="gray:green:gray" ]
 
 	/* EU Week 9 */
-//	FNC	->	DIG	[ color="gray:green:gray" ]
+	FNC	->	DIG	[ color="gray:green:gray" ]
 
 	/* Mid Season Brawl */
 
@@ -81,7 +81,6 @@ digraph MidSeasonBrawl {
 	FNC	->	DK	[ color="purple:purple" ]
 	NM	->	SPT	[ color="purple:purple" ]
 	MVPB	->	R2E	[ color="purple:gray" dir="none" constraint="false" ]
-
 	TS	->	RDC	[ color="purple:purple" ]
 	L5	->	EGST	[ color="purple:purple" ]
 	eStar	->	DIG	[ color="purple:purple" ]
@@ -91,7 +90,6 @@ digraph MidSeasonBrawl {
 	FNC	->	NM	[ color="purple:purple" ]
 	R2E	->	DK	[ color="purple:purple" ]
 	MVPB	->	SPT	[ color="purple:purple" ]
-
 	TS	->	EGST	[ color="purple:gray" dir="none" constraint="false" ]
 	eStar	->	RDC	[ color="purple:purple" ]
 	DIG	->	L5	[ color="purple:purple" ]
@@ -107,7 +105,7 @@ digraph MidSeasonBrawl {
 
 	/* Round 4 */
 	NM	->	DK	[ color="purple:gray" dir="none" constraint="false" ]
-	MVPB	->	FNC	[ color="purple:purple" ]
+	MVPB	->	FNC	[ color="red:red" ]
 	R2E	->	SPT	[ color="purple:purple" ]
 	eStar	->	L5	[ color="purple:gray" dir="none" constraint="false" ]
 	DIG	->	TS	[ color="purple:gray" dir="none" constraint="false" ]
@@ -124,16 +122,30 @@ digraph MidSeasonBrawl {
 	DIG	->	L5	[ color="purple" ]
 	TS	->	EGST	[ color="purple" ]
 
-	edge [ color="gray" dir="none" constraint="false" style="dashed" ]
-
-	/* Upper Bracket Round 1 */
-	DIG	->	MVPB
-	FNC	->	eStar
-
 	/* Lower Bracket Round 1 */
-	TS	->	R2E
-	L5	->	NM
+	L5	->	NM	[ color="purple:purple:purple" ]
+	R2E	->	TS	[ color="purple:gray:purple" ]
 
+	/* Upper Bracket Semifinals */
+	FNC	->	eStar	[ color="purple:purple:purple" ]
+	DIG	->	MVPB	[ color="purple:gray:purple" ]
 
+	/* Lower Bracket Quarterfinals */
+	L5	->	eStar	[ color="purple:purple:purple" ]
+	MVPB	->	R2E	[ color="purple:gray:purple" ]
+
+	/* Upper Bracket Finals */
+	FNC	->	DIG	[ color="gray:purple:gray" ]
+	
+	/* Lower Bracket Semifinals */
+	L5	->	MVPB	[ color="gray:purple:gray" ]
+
+	/* Lower Bracket Finals */
+	DIG	->	L5	[ color="gray:purple:gray" ]
+
+	/* Grand Finals */
+	FNC	->	DIG	[ color="gray:purple:gray:gray" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed" ]
 
 }
