@@ -44,4 +44,9 @@ digraph NA {
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 	
+	/* Week 2 */
+	TS	->	GFE
+	R2E	->	NVT
+	SSS	->	EID
+	TF	->	NVT
 }

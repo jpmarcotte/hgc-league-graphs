@@ -44,4 +44,9 @@ digraph KR {
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
+	/* Week 2 */
+	MVPB	->	BLS
+	TP	->	L5
+	TP	->	MVPM
+	MTY	->	RVN
 }

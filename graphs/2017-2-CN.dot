@@ -13,7 +13,7 @@ digraph CN {
 
 	/* Phase 1 Aggregates */
 //	CE	->	eStar	[ color="lightgray:lightgray:lightgray" ]
-	CE	->	RPG	[ color="lightgray:lightgray" ]
+//	CE	->	RPG	[ color="lightgray:lightgray" ]
 	CE	->	SOA	[ color="lightgray:lightgray:lightgray" ]
 	CE	->	HL	[ color="lightgray:lightgray:lightgray" ]
 	SPT	->	CE	[ color="lightgray" ]
@@ -24,7 +24,7 @@ digraph CN {
 //	RPG	->	SOA	[ color="lightgray:lightgray:lightgray" ]
 	HL	->	RPG	[ color="lightgray:lightgray" ]
 	SPT	->	RPG	[ color="lightgray:lightgray:lightgray" ]
-	HL	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+//	HL	->	SOA	[ color="lightgray:lightgray:lightgray" ]
 	SPT	->	SOA	[ color="lightgray:lightgray" ]
 //	SPT	->	HL	[ color="lightgray:lightgray" ]
 	
@@ -33,13 +33,13 @@ digraph CN {
 	RPG	->	SOA	[ color="black:black" ]
 	eStar	->	CE	[ color="black:gray" dir="none" constraint="false" ]
 	SPT	->	HL	[ color="black:gray" dir="none" constraint="false" ]
+	SPT	->	WKG	[ color="black:black" ]
+	HL	->	SOA	[ color="black:gray" dir="none" constraint="false" ]
+	eStar	->	KT	[ color="black:black" ]
+	CE	->	RPG	[ color="black:black" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	SPT	->	WKG
-	HL	->	SOA
-	eStar	->	KT
-	CE	->	RPG
 	SPT	->	KT
 	eStar	->	RPG
 	HL	->	CE

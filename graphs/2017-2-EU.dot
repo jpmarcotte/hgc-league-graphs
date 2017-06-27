@@ -37,4 +37,9 @@ digraph EU {
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
+	/* Week 2 */
+	FNC	->	TL
+	DIG	->	TGG
+	EXP	->	ZE
+	PD	->	TGG
 }
