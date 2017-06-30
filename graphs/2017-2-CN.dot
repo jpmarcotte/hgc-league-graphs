@@ -37,12 +37,12 @@ digraph CN {
 	HL	->	SOA	[ color="black:gray" dir="none" constraint="false" ]
 	eStar	->	KT	[ color="black:black" ]
 	CE	->	RPG	[ color="black:black" ]
+	SPT	->	KT	[ color="black:black" ]
+	eStar	->	RPG	[ color="black:black" ]
+	CE	->	HL	[ color="black:black" ]
+	SOA	->	WKG	[ color="black:black" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	SPT	->	KT
-	eStar	->	RPG
-	HL	->	CE
-	SOA	->	WKG
 
 }

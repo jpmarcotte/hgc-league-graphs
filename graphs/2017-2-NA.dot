@@ -49,4 +49,6 @@ digraph NA {
 	R2E	->	NVT
 	SSS	->	EID
 	TF	->	NVT
+	TS	->	NT
+	R2E	->	SSS
 }

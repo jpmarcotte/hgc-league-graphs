@@ -49,4 +49,6 @@ digraph KR {
 	TP	->	L5
 	TP	->	MVPM
 	MTY	->	RVN
+	BLS	->	RRR
+	MVPB	->	L5
 }

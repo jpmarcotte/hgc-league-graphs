@@ -23,14 +23,14 @@ digraph EU {
 //	TRC	->	PD	[ color="gray" ]
 //	EXP	->	TRC	[ color="gray" ]
 	DIG	->	TRC	[ color="gray:gray" ]
-	EXP	->	PD	[ color="gray:gray:gray" ]
+	EXP	->	PD	[ color="gray:gray:gray" constraint="false" ]
 	DIG	->	PD	[ color="gray:gray:gray" ]
 	DIG	->	EXP	[ color="gray" ]
 
 	/* Week 1 */
 	TRC	->	EXP	[ color="gray:black:gray" ]
 	ZE	->	PD	[ color="black:black:black" ]
-	PD	->	TRC	[ color="black:gray:black" ]
+	PD	->	TRC	[ color="gray:black:gray" ]
 	TL	->	TGG	[ color="black:black:black" ]
 	FNC	->	ZE	[ color="black:black:black" ]
 	TL	->	DIG	[ color="black:black:black" ]
@@ -42,4 +42,6 @@ digraph EU {
 	DIG	->	TGG
 	EXP	->	ZE
 	PD	->	TGG
+	DIG	->	EXP
+	FNC	->	TRC
 }
