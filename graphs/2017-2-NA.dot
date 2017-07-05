@@ -1,6 +1,5 @@
 digraph NA {
 	node [shape=circle fixedsize=true width=.75 label="" color="white"];
-	{ rank=same GFE TS }
 	imagepath="logos/";
 	GFE	[ image="gale-force-esports.png" ];
 	NT	[ image="no-tomorrow.png" ];
@@ -13,12 +12,12 @@ digraph NA {
 
 	/* Phase 1 Aggregates */
 	GFE	->	NT	[ color="lightgray:lightgray" ]
-	GFE	->	TS	[ color="lightgray" ]
+//	GFE	->	TS	[ color="lightgray" ]
 	GFE	->	TF	[ color="lightgray:lightgray" ]
 //	R2E	->	GFE	[ color="lightgray" ]
 	GFE	->	SSS	[ color="lightgray:lightgray:lightgray" ]
 //	GFE	->	NVT	[ color="lightgray:lightgray:lightgray" ]
-	TS	->	NT	[ color="lightgray:lightgray:lightgray" ]
+//	TS	->	NT	[ color="lightgray:lightgray:lightgray" ]
 //	TF	->	NT	[ color="lightgray" ]
 	R2E	->	NT	[ color="lightgray:lightgray" ]
 //	SSS	->	NT	[ color="lightgray:lightgray" ]
@@ -29,9 +28,9 @@ digraph NA {
 	TS	->	NVT	[ color="lightgray" ]
 	R2E	->	TF	[ color="lightgray:lightgray:lightgray" ]
 	TF	->	SSS	[ color="lightgray" ]
-	TF	->	NVT	[ color="lightgray:lightgray:lightgray" ]
-	R2E	->	SSS	[ color="lightgray:lightgray:lightgray" ]
-	R2E	->	NVT	[ color="lightgray:lightgray:lightgray" ]
+//	TF	->	NVT	[ color="lightgray:lightgray:lightgray" ]
+//	R2E	->	SSS	[ color="lightgray:lightgray:lightgray" ]
+//	R2E	->	NVT	[ color="lightgray:lightgray:lightgray" ]
 	SSS	->	NVT	[ color="lightgray:lightgray" ]
 
 	/* Week 1 */
@@ -42,13 +41,22 @@ digraph NA {
 	GFE	->	R2E	[ color="gray:black:gray" ]
 	TS	->	EID	[ color="black:black:black" ]
 
+	/* Week 2 */
+	GFE	->	TS	[ color="gray:black:gray" ]
+	R2E	->	NVT	[ color="black:gray:black" ]
+	SSS	->	EID	[ color="black:gray:black" ]
+	TF	->	NVT	[ color="black:black:black" ]
+	NT	->	TS	[ color="gray:black:gray" ]
+	R2E	->	SSS	[ color="black:gray:black" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 	
-	/* Week 2 */
-	TS	->	GFE
-	R2E	->	NVT
-	SSS	->	EID
-	TF	->	NVT
-	TS	->	NT
-	R2E	->	SSS
+	/* Week 3 */
+	GFE	->	NT
+	SSS	->	TF
+	NVT	->	TS
+	R2E	->	EID
+	GFE	->	TF
+	TS	->	SSS
+
 }

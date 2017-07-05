@@ -11,21 +11,21 @@ digraph EU {
 	TGG	[ image="team-good-guys.png" ];
 
 	/* Phase 1 Aggregates */
-	FNC	->	TL	[ color="gray" ]
-	TL	->	TRC	[ color="gray" ]
-	TL	->	PD	[ color="gray" ]
-	TL	->	EXP	[ color="gray" ]
-//	TL	->	DIG	[ color="gray" ]
-	FNC	->	TRC	[ color="gray:gray:gray" ]
-	FNC	->	PD	[ color="gray:gray:gray" ]
-	FNC	->	EXP	[ color="gray:gray" ]
-	FNC	->	DIG	[ color="gray" ]
-//	TRC	->	PD	[ color="gray" ]
-//	EXP	->	TRC	[ color="gray" ]
-	DIG	->	TRC	[ color="gray:gray" ]
-	EXP	->	PD	[ color="gray:gray:gray" constraint="false" ]
-	DIG	->	PD	[ color="gray:gray:gray" ]
-	DIG	->	EXP	[ color="gray" ]
+//	FNC	->	TL	[ color="lightgray" ]
+	TL	->	TRC	[ color="lightgray" ]
+	TL	->	PD	[ color="lightgray" ]
+	TL	->	EXP	[ color="lightgray" ]
+//	TL	->	DIG	[ color="lightgray" ]
+//	FNC	->	TRC	[ color="lightgray:lightgray:lightgray" ]
+	FNC	->	PD	[ color="lightgray:lightgray:lightgray" ]
+	FNC	->	EXP	[ color="lightgray:lightgray" ]
+	FNC	->	DIG	[ color="lightgray" ]
+//	TRC	->	PD	[ color="lightgray" ]
+//	EXP	->	TRC	[ color="lightgray" ]
+	DIG	->	TRC	[ color="lightgray:lightgray" ]
+	EXP	->	PD	[ color="lightgray:lightgray:lightgray" constraint="false" ]
+	DIG	->	PD	[ color="lightgray:lightgray:lightgray" ]
+//	DIG	->	EXP	[ color="lightgray" ]
 
 	/* Week 1 */
 	TRC	->	EXP	[ color="gray:black:gray" ]
@@ -35,13 +35,22 @@ digraph EU {
 	FNC	->	ZE	[ color="black:black:black" ]
 	TL	->	DIG	[ color="black:black:black" ]
 
+	/* Week 2 */
+	FNC	->	TL	[ color="gray:black:gray" ]
+	DIG	->	TGG	[ color="gray:black:gray" ]
+	EXP	->	ZE	[ color="black:black:black" ]
+	TGG	->	PD	[ color="gray:black:gray" ]
+	FNC	->	TRC	[ color="black:black:black" ]
+	EXP	->	DIG	[ color="gray:black:gray" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 2 */
-	FNC	->	TL
-	DIG	->	TGG
-	EXP	->	ZE
-	PD	->	TGG
-	DIG	->	EXP
-	FNC	->	TRC
+	/* Week 3 */
+	TL	->	TRC
+	EXP	->	PD
+	FNC	->	TGG
+	DIG	->	ZE
+	TL	->	PD
+	FNC	->	EXP
+
 }

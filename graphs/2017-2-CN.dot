@@ -19,13 +19,13 @@ digraph CN {
 	SPT	->	CE	[ color="lightgray" ]
 	eStar	->	RPG	[ color="lightgray:lightgray:lightgray" ]
 	eStar	->	SOA	[ color="lightgray:lightgray:lightgray" ]
-	eStar	->	HL	[ color="lightgray:lightgray:lightgray" ]
-	eStar	->	SPT	[ color="lightgray:lightgray" ]
+//	eStar	->	HL	[ color="lightgray:lightgray:lightgray" ]
+//	eStar	->	SPT	[ color="lightgray:lightgray" ]
 //	RPG	->	SOA	[ color="lightgray:lightgray:lightgray" ]
-	HL	->	RPG	[ color="lightgray:lightgray" ]
+//	HL	->	RPG	[ color="lightgray:lightgray" ]
 	SPT	->	RPG	[ color="lightgray:lightgray:lightgray" ]
 //	HL	->	SOA	[ color="lightgray:lightgray:lightgray" ]
-	SPT	->	SOA	[ color="lightgray:lightgray" ]
+//	SPT	->	SOA	[ color="lightgray:lightgray" ]
 //	SPT	->	HL	[ color="lightgray:lightgray" ]
 	
 	/* Week 1 */
@@ -42,7 +42,21 @@ digraph CN {
 	CE	->	HL	[ color="black:black" ]
 	SOA	->	WKG	[ color="black:black" ]
 
+	/* Week 2 */
+	HL	->	RPG	[ color="black:gray" dir="none" contraint="false" ]
+	SOA	->	KT	[ color="black:gray" dir="none" contraint="false" ]
+	CE	->	WKG	[ color="black:black" ]
+	SPT	->	eStar	[ color="black:black" ]
+	eStar	->	HL	[ color="black:black" ]
+	RPG	->	WKG	[ color="black:black" ]
+	SPT	->	SOA	[ color="black:black" ]
+	CE	->	KT	[ color="black:black" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
+	HL	->	KT
+	eStar	->	WKG
+	SPT	->	RPG
+	CE	->	SOA
 
 }
