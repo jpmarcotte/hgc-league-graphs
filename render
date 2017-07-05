@@ -3,6 +3,10 @@ for f in graphs/*.dot
 do
 	p=${f%.dot}
 	p=${p#graphs/}
-	echo "dot -Tpng \"$f\" -o \"renders/$p.png\""
-	dot -Tpng "$f" -o "renders/$p.png"
+	o="renders/$p.png";
+	if [ $f -nt $o ]
+		then
+			echo "dot -Tpng \"$f\" -o \"$o\""
+			dot -Tpng "$f" -o "$o"
+	fi
 done
