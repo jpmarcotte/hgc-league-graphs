@@ -14,7 +14,7 @@ digraph CN {
 	/* Phase 1 Aggregates */
 //	CE	->	eStar	[ color="lightgray:lightgray:lightgray" ]
 //	CE	->	RPG	[ color="lightgray:lightgray" ]
-	CE	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+//	CE	->	SOA	[ color="lightgray:lightgray:lightgray" ]
 	CE	->	HL	[ color="lightgray:lightgray:lightgray" ]
 	SPT	->	CE	[ color="lightgray" ]
 	eStar	->	RPG	[ color="lightgray:lightgray:lightgray" ]
@@ -23,12 +23,12 @@ digraph CN {
 //	eStar	->	SPT	[ color="lightgray:lightgray" ]
 //	RPG	->	SOA	[ color="lightgray:lightgray:lightgray" ]
 //	HL	->	RPG	[ color="lightgray:lightgray" ]
-	SPT	->	RPG	[ color="lightgray:lightgray:lightgray" ]
+//	SPT	->	RPG	[ color="lightgray:lightgray:lightgray" ]
 //	HL	->	SOA	[ color="lightgray:lightgray:lightgray" ]
 //	SPT	->	SOA	[ color="lightgray:lightgray" ]
 //	SPT	->	HL	[ color="lightgray:lightgray" ]
 	
-	/* Week 1 */
+	/* Round 1 - 1 */
 	KT	->	WKG	[ color="black:black" ]
 	RPG	->	SOA	[ color="black:black" ]
 	eStar	->	CE	[ color="black:gray" dir="none" constraint="false" ]
@@ -42,7 +42,7 @@ digraph CN {
 	CE	->	HL	[ color="black:black" ]
 	SOA	->	WKG	[ color="black:black" ]
 
-	/* Week 2 */
+	/* Round 1 - 2 */
 	HL	->	RPG	[ color="black:gray" dir="none" contraint="false" ]
 	SOA	->	KT	[ color="black:gray" dir="none" contraint="false" ]
 	CE	->	WKG	[ color="black:black" ]
@@ -51,12 +51,23 @@ digraph CN {
 	RPG	->	WKG	[ color="black:black" ]
 	SPT	->	SOA	[ color="black:black" ]
 	CE	->	KT	[ color="black:black" ]
+	CE	->	SOA	[ color="black:black" ]
+	SPT	->	RPG	[ color="black:black" ]
+	eStar	->	WKG	[ color="black:black" ]
+	HL	->	KT	[ color="black:black" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	HL	->	KT
-	eStar	->	WKG
-	SPT	->	RPG
-	CE	->	SOA
+	/* Round 1 - 3 */
+	HL	->	WKG
+	eStar	->	SOA
+	RPG	->	KT
+	SPT	->	CE
+
+	/* Round 2 - 1 */
+	WKG	->	KT
+	SOA	->	RPG
+	eStar	->	CE
+	SPT	->	HL
 
 }
