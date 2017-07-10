@@ -12,25 +12,25 @@ digraph EU {
 
 	/* Phase 1 Aggregates */
 //	FNC	->	TL	[ color="lightgray" ]
-	TL	->	TRC	[ color="lightgray" ]
-	TL	->	PD	[ color="lightgray" ]
+//	TL	->	TRC	[ color="lightgray" ]
+//	TL	->	PD	[ color="lightgray" ]
 	TL	->	EXP	[ color="lightgray" ]
 //	TL	->	DIG	[ color="lightgray" ]
 //	FNC	->	TRC	[ color="lightgray:lightgray:lightgray" ]
 	FNC	->	PD	[ color="lightgray:lightgray:lightgray" ]
-	FNC	->	EXP	[ color="lightgray:lightgray" ]
+//	FNC	->	EXP	[ color="lightgray:lightgray" ]
 	FNC	->	DIG	[ color="lightgray" ]
 //	TRC	->	PD	[ color="lightgray" ]
 //	EXP	->	TRC	[ color="lightgray" ]
-	DIG	->	TRC	[ color="lightgray:lightgray" ]
-	EXP	->	PD	[ color="lightgray:lightgray:lightgray" constraint="false" ]
+	DIG	->	TRC	[ color="lightgray:lightgray" constraint="false" ]
+//	EXP	->	PD	[ color="lightgray:lightgray:lightgray" constraint="false" ]
 	DIG	->	PD	[ color="lightgray:lightgray:lightgray" ]
 //	DIG	->	EXP	[ color="lightgray" ]
 
 	/* Week 1 */
 	TRC	->	EXP	[ color="gray:black:gray" ]
 	ZE	->	PD	[ color="black:black:black" ]
-	PD	->	TRC	[ color="gray:black:gray" ]
+	PD	->	TRC	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
 	TL	->	TGG	[ color="black:black:black" ]
 	FNC	->	ZE	[ color="black:black:black" ]
 	TL	->	DIG	[ color="black:black:black" ]
@@ -43,14 +43,22 @@ digraph EU {
 	FNC	->	TRC	[ color="black:black:black" ]
 	EXP	->	DIG	[ color="gray:black:gray" ]
 
+	/* Week 3 */
+	TRC	->	TL	[ color="black:black:black" ]
+	EXP	->	PD	[ color="black:black:black" ]
+	FNC	->	TGG	[ color="black:gray:black" ]
+	DIG	->	ZE	[ color="black:black:black" ]
+	TL	->	PD	[ color="black:black:black" ]
+	FNC	->	EXP	[ color="black:black:black" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 3 */
-	TL	->	TRC
-	EXP	->	PD
-	FNC	->	TGG
-	DIG	->	ZE
-	TL	->	PD
-	FNC	->	EXP
+	/* Week 4 */
+	TRC	->	TGG
+	DIG	->	PD
+	FNC	->	DIG
+	ZE	->	TL
+	ZE	->	TRC
+	EXP	->	TGG
 
 }

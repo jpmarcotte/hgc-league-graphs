@@ -11,9 +11,9 @@ digraph NA {
 	EID	[ image="even-in-death.png" ];
 
 	/* Phase 1 Aggregates */
-	GFE	->	NT	[ color="lightgray:lightgray" ]
+//	GFE	->	NT	[ color="lightgray:lightgray" ]
 //	GFE	->	TS	[ color="lightgray" ]
-	GFE	->	TF	[ color="lightgray:lightgray" ]
+//	GFE	->	TF	[ color="lightgray:lightgray" ]
 //	R2E	->	GFE	[ color="lightgray" ]
 	GFE	->	SSS	[ color="lightgray:lightgray:lightgray" ]
 //	GFE	->	NVT	[ color="lightgray:lightgray:lightgray" ]
@@ -24,10 +24,10 @@ digraph NA {
 	NT	->	NVT	[ color="lightgray" ]
 	TS	->	TF	[ color="lightgray:lightgray" ]
 	TS	->	R2E	[ color="lightgray" ]
-	TS	->	SSS	[ color="lightgray:lightgray" ]
-	TS	->	NVT	[ color="lightgray" ]
+//	TS	->	SSS	[ color="lightgray:lightgray" ]
+//	TS	->	NVT	[ color="lightgray" ]
 	R2E	->	TF	[ color="lightgray:lightgray:lightgray" ]
-	TF	->	SSS	[ color="lightgray" ]
+//	TF	->	SSS	[ color="lightgray" ]
 //	TF	->	NVT	[ color="lightgray:lightgray:lightgray" ]
 //	R2E	->	SSS	[ color="lightgray:lightgray:lightgray" ]
 //	R2E	->	NVT	[ color="lightgray:lightgray:lightgray" ]
@@ -49,14 +49,21 @@ digraph NA {
 	NT	->	TS	[ color="gray:black:gray" ]
 	R2E	->	SSS	[ color="black:gray:black" ]
 
+	/* Week 3 */
+	GFE	->	NT	[ color="gray:black:gray" ]
+	TF	->	SSS	[ color="black:black:black" ]
+	TS	->	NVT	[ color="black:black:black" ]
+	R2E	->	EID	[ color="black:black:black" ]
+	TF	->	GFE	[ color="black:gray:black" ]
+	TS	->	SSS	[ color="black:gray:black" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 	
-	/* Week 3 */
-	GFE	->	NT
-	SSS	->	TF
-	NVT	->	TS
-	R2E	->	EID
-	GFE	->	TF
-	TS	->	SSS
-
+	/* Week 4 */
+	NT	->	NVT
+	R2E	->	TF
+	TS	->	R2E
+	GFE	->	EID
+	NT	->	EID
+	SSS	->	NVT
 }
