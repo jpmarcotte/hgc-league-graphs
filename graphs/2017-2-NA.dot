@@ -21,19 +21,19 @@ digraph NA {
 //	TF	->	NT	[ color="lightgray" ]
 	R2E	->	NT	[ color="lightgray:lightgray" ]
 //	SSS	->	NT	[ color="lightgray:lightgray" ]
-	NT	->	NVT	[ color="lightgray" ]
+//	NT	->	NVT	[ color="lightgray" ]
 	TS	->	TF	[ color="lightgray:lightgray" ]
-	TS	->	R2E	[ color="lightgray" ]
+//	TS	->	R2E	[ color="lightgray" ]
 //	TS	->	SSS	[ color="lightgray:lightgray" ]
 //	TS	->	NVT	[ color="lightgray" ]
-	R2E	->	TF	[ color="lightgray:lightgray:lightgray" ]
+//	R2E	->	TF	[ color="lightgray:lightgray:lightgray" ]
 //	TF	->	SSS	[ color="lightgray" ]
 //	TF	->	NVT	[ color="lightgray:lightgray:lightgray" ]
 //	R2E	->	SSS	[ color="lightgray:lightgray:lightgray" ]
 //	R2E	->	NVT	[ color="lightgray:lightgray:lightgray" ]
 	SSS	->	NVT	[ color="lightgray:lightgray" ]
 
-	/* Week 1 */
+	/* Phase 2 Group stage 1 - Round 1 */
 	NT	->	SSS	[ color="black:gray:black" ]
 	TF	->	EID	[ color="black:black:black" ]
 	NT	->	TF	[ color="black:gray:black" ]
@@ -41,7 +41,7 @@ digraph NA {
 	GFE	->	R2E	[ color="gray:black:gray" ]
 	TS	->	EID	[ color="black:black:black" ]
 
-	/* Week 2 */
+	/* Phase 2 Group stage 1 - Round 2 */
 	GFE	->	TS	[ color="gray:black:gray" ]
 	R2E	->	NVT	[ color="black:gray:black" ]
 	SSS	->	EID	[ color="black:gray:black" ]
@@ -49,7 +49,7 @@ digraph NA {
 	NT	->	TS	[ color="gray:black:gray" ]
 	R2E	->	SSS	[ color="black:gray:black" ]
 
-	/* Week 3 */
+	/* Phase 2 Group stage 1 - Round 3 */
 	GFE	->	NT	[ color="gray:black:gray" ]
 	TF	->	SSS	[ color="black:black:black" ]
 	TS	->	NVT	[ color="black:black:black" ]
@@ -57,12 +57,13 @@ digraph NA {
 	TF	->	GFE	[ color="black:gray:black" ]
 	TS	->	SSS	[ color="black:gray:black" ]
 
+	/* Phase 2 Group stage 1 - Round 4 */
+	NT	->	NVT	[ color="black:gray:black" ]
+	TF	->	R2E	[ color="gray:black:gray" ]
+	TS	->	R2E	[ color="black:gray:black" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 	
-	/* Week 4 */
-	NT	->	NVT
-	R2E	->	TF
-	TS	->	R2E
 	GFE	->	EID
 	NT	->	EID
 	SSS	->	NVT

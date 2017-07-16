@@ -19,15 +19,15 @@ digraph EU {
 //	FNC	->	TRC	[ color="lightgray:lightgray:lightgray" ]
 	FNC	->	PD	[ color="lightgray:lightgray:lightgray" ]
 //	FNC	->	EXP	[ color="lightgray:lightgray" ]
-	FNC	->	DIG	[ color="lightgray" ]
+//	FNC	->	DIG	[ color="lightgray" ]
 //	TRC	->	PD	[ color="lightgray" ]
 //	EXP	->	TRC	[ color="lightgray" ]
 	DIG	->	TRC	[ color="lightgray:lightgray" constraint="false" ]
 //	EXP	->	PD	[ color="lightgray:lightgray:lightgray" constraint="false" ]
-	DIG	->	PD	[ color="lightgray:lightgray:lightgray" ]
+//	DIG	->	PD	[ color="lightgray:lightgray:lightgray" ]
 //	DIG	->	EXP	[ color="lightgray" ]
 
-	/* Week 1 */
+	/* Phase 2 Group stage 1 - Round 1 */
 	TRC	->	EXP	[ color="gray:black:gray" ]
 	ZE	->	PD	[ color="black:black:black" ]
 	PD	->	TRC	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
@@ -35,7 +35,7 @@ digraph EU {
 	FNC	->	ZE	[ color="black:black:black" ]
 	TL	->	DIG	[ color="black:black:black" ]
 
-	/* Week 2 */
+	/* Phase 2 Group stage 1 - Round 2 */
 	FNC	->	TL	[ color="gray:black:gray" ]
 	DIG	->	TGG	[ color="gray:black:gray" ]
 	EXP	->	ZE	[ color="black:black:black" ]
@@ -43,7 +43,7 @@ digraph EU {
 	FNC	->	TRC	[ color="black:black:black" ]
 	EXP	->	DIG	[ color="gray:black:gray" ]
 
-	/* Week 3 */
+	/* Phase 2 Group stage 1 - Round 3 */
 	TRC	->	TL	[ color="black:black:black" ]
 	EXP	->	PD	[ color="black:black:black" ]
 	FNC	->	TGG	[ color="black:gray:black" ]
@@ -51,14 +51,15 @@ digraph EU {
 	TL	->	PD	[ color="black:black:black" ]
 	FNC	->	EXP	[ color="black:black:black" ]
 
+	/* Phase 2 Group stage 1 - Round 4 */
+	TRC	->	TGG	[ color="black:black:black" ]
+	DIG	->	PD	[ color="black:black:black" ]
+	FNC	->	DIG	[ color="black:black:black" ]
+	ZE	->	TL	[ color="black:gray:black" ]
+	TRC	->	ZE	[ color="black:black:black" ]
+	EXP	->	TGG	[ color="black:black:black" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Week 4 */
-	TRC	->	TGG
-	DIG	->	PD
-	FNC	->	DIG
-	ZE	->	TL
-	ZE	->	TRC
-	EXP	->	TGG
 
 }

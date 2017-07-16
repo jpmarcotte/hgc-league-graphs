@@ -15,10 +15,10 @@ digraph CN {
 //	CE	->	eStar	[ color="lightgray:lightgray:lightgray" ]
 //	CE	->	RPG	[ color="lightgray:lightgray" ]
 //	CE	->	SOA	[ color="lightgray:lightgray:lightgray" ]
-	CE	->	HL	[ color="lightgray:lightgray:lightgray" ]
-	SPT	->	CE	[ color="lightgray" ]
-	eStar	->	RPG	[ color="lightgray:lightgray:lightgray" ]
-	eStar	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+//	CE	->	HL	[ color="lightgray:lightgray:lightgray" ]
+//	SPT	->	CE	[ color="lightgray" ]
+//	eStar	->	RPG	[ color="lightgray:lightgray:lightgray" ]
+//	eStar	->	SOA	[ color="lightgray:lightgray:lightgray" ]
 //	eStar	->	HL	[ color="lightgray:lightgray:lightgray" ]
 //	eStar	->	SPT	[ color="lightgray:lightgray" ]
 //	RPG	->	SOA	[ color="lightgray:lightgray:lightgray" ]
@@ -28,7 +28,7 @@ digraph CN {
 //	SPT	->	SOA	[ color="lightgray:lightgray" ]
 //	SPT	->	HL	[ color="lightgray:lightgray" ]
 	
-	/* Round 1 - 1 */
+	/* State 1 Part 1 - Round 1 */
 	KT	->	WKG	[ color="black:black" ]
 	RPG	->	SOA	[ color="black:black" ]
 	eStar	->	CE	[ color="black:gray" dir="none" constraint="false" ]
@@ -42,7 +42,7 @@ digraph CN {
 	CE	->	HL	[ color="black:black" ]
 	SOA	->	WKG	[ color="black:black" ]
 
-	/* Round 1 - 2 */
+	/* Stage 1 Part 1 - Round 2 */
 	HL	->	RPG	[ color="black:gray" dir="none" contraint="false" ]
 	SOA	->	KT	[ color="black:gray" dir="none" contraint="false" ]
 	CE	->	WKG	[ color="black:black" ]
@@ -56,18 +56,32 @@ digraph CN {
 	eStar	->	WKG	[ color="black:black" ]
 	HL	->	KT	[ color="black:black" ]
 
+	/* Stage 1 Part 1 - Round 3 */
+	HL	->	WKG	[ color="black:black" ]
+	eStar	->	SOA	[ color="black:black" ]
+	RPG	->	KT	[ color="black:black" ]
+	SPT	->	CE	[ color="black:black" ]
+
+	/* Stage 1 Part 2 - Round 1 */
+	KT	->	WKG	[ color="blue:blue" ]
+	SOA	->	RPG	[ color="blue:gray" dir="none" constraint="false" ]
+	eStar	->	CE	[ color="blue:gray" dir="none" constraint="false" ]
+	SPT	->	HL	[ color="blue:blue" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Round 1 - 3 */
-	HL	->	WKG
-	eStar	->	SOA
-	RPG	->	KT
-	SPT	->	CE
-
-	/* Round 2 - 1 */
-	WKG	->	KT
-	SOA	->	RPG
-	eStar	->	CE
-	SPT	->	HL
+	/* Stage 1 Part 2 - Round 2 */
+	SPT	->	WKG
+	HL	->	SOA
+	eStar	->	KT
+	CE	->	RPG
+	SPT	->	KT
+	eStar	->	RPG
+	HL	->	CE
+	SOA	->	WKG
+	HL	->	RPG
+	SOA	->	KT
+	CE	->	WKG
+	eStar	->	SPT
 
 }
