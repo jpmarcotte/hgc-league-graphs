@@ -55,11 +55,14 @@ digraph EU {
 	TRC	->	TGG	[ color="black:black:black" ]
 	DIG	->	PD	[ color="black:black:black" ]
 	FNC	->	DIG	[ color="black:black:black" ]
-	ZE	->	TL	[ color="black:gray:black" ]
+	ZE	->	TL	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
 	TRC	->	ZE	[ color="black:black:black" ]
 	EXP	->	TGG	[ color="black:black:black" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-
+	TRC	->	DIG
+	TL	->	EXP
+	TGG	->	ZE
+	PD	->	FNC
 }

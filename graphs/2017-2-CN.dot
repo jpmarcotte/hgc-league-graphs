@@ -68,13 +68,14 @@ digraph CN {
 	eStar	->	CE	[ color="blue:gray" dir="none" constraint="false" ]
 	SPT	->	HL	[ color="blue:blue" ]
 
+	/* Stage 1 Part 2 - Round 2 */
+	SPT	->	WKG	[ color="blue:blue" ]
+	HL	->	SOA	[ color="blue:gray" dir="none" constraint="false" ]
+	eStar	->	KT	[ color="blue:blue" ]
+	CE	->	RPG	[ color="blue:blue" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Stage 1 Part 2 - Round 2 */
-	SPT	->	WKG
-	HL	->	SOA
-	eStar	->	KT
-	CE	->	RPG
 	SPT	->	KT
 	eStar	->	RPG
 	HL	->	CE

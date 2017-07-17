@@ -71,4 +71,6 @@ digraph KR {
 	/* Phase 2 Group stage 1 - Round 5 */
 	MTY	->	L5
 	TP	->	RRR
+	MVPB	->	RVN
+	BLS	->	MVPM
 }
