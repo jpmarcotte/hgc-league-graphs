@@ -15,14 +15,14 @@ digraph NA {
 //	GFE	->	TS	[ color="lightgray" ]
 //	GFE	->	TF	[ color="lightgray:lightgray" ]
 //	R2E	->	GFE	[ color="lightgray" ]
-	GFE	->	SSS	[ color="lightgray:lightgray:lightgray" ]
+//	GFE	->	SSS	[ color="lightgray:lightgray:lightgray" ]
 //	GFE	->	NVT	[ color="lightgray:lightgray:lightgray" ]
 //	TS	->	NT	[ color="lightgray:lightgray:lightgray" ]
 //	TF	->	NT	[ color="lightgray" ]
-	R2E	->	NT	[ color="lightgray:lightgray" ]
+//	R2E	->	NT	[ color="lightgray:lightgray" ]
 //	SSS	->	NT	[ color="lightgray:lightgray" ]
 //	NT	->	NVT	[ color="lightgray" ]
-	TS	->	TF	[ color="lightgray:lightgray" constraint="false" ]
+//	TS	->	TF	[ color="lightgray:lightgray" constraint="false" ]
 //	TS	->	R2E	[ color="lightgray" ]
 //	TS	->	SSS	[ color="lightgray:lightgray" ]
 //	TS	->	NVT	[ color="lightgray" ]
@@ -65,11 +65,12 @@ digraph NA {
 	EID	->	NT	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
 	SSS	->	NVT	[ color="black:gray:black" ]
 
+	/* Phase 2 Group stage 1 - Round 5 */
+	R2E	->	NT	[ color="black:black:black" ]
+	GFE	->	SSS	[ color="black:black:black" ]
+	NVT	->	EID	[ color="black:gray:black" ]
+	TS	->	TF	[ color="gray:black:gray" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 	
-	/* Phase 2 Group stage 1 - Round 5 */
-	NT	->	R2E
-	GFE	->	SSS
-	NVT	->	EID
-	TF	->	TS
 }

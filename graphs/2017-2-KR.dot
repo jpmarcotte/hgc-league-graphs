@@ -14,14 +14,14 @@ digraph KR {
 	/* Phase 1 Aggregates */
 //	MVPM	->	MTY	[ color="lightgray:lightgray" ]
 //	TP	->	MVPM	[ color="lightgray" ]
-	MVPM	->	BLS	[ color="lightgray:lightgray" ]
+//	MVPM	->	BLS	[ color="lightgray:lightgray" ]
 //	MVPB	->	MVPM	[ color="lightgray:lightgray:lightgray" ]
 //	L5	->	MVPM	[ color="lightgray:lightgray" ]
 //	MVPM	->	RVN	[ color="lightgray:lightgray" ]
 //	MTY	->	TP	[ color="lightgray" ]
 //	MTY	->	BLS	[ color="lightgray:lightgray" ]
 //	MVPB	->	MTY	[ color="lightgray:lightgray:lightgray" ]
-	L5	->	MTY	[ color="lightgray:lightgray:lightgray" ]
+//	L5	->	MTY	[ color="lightgray:lightgray:lightgray" ]
 //	MTY	->	RVN	[ color="lightgray:lightgray:lightgray" ]
 //	TP	->	BLS	[ color="lightgray:lightgray:lightgray" ]
 //	MVPB	->	TP	[ color="lightgray:lightgray" ]
@@ -31,7 +31,7 @@ digraph KR {
 //	L5	->	BLS	[ color="lightgray:lightgray:lightgray" ]
 //	BLS	->	RVN	[ color="lightgray:lightgray:lightgray" ]
 //	L5	->	MVPB	[ color="lightgray" ]
-	MVPB	->	RVN	[ color="lightgray:lightgray:lightgray" ]
+//	MVPB	->	RVN	[ color="lightgray:lightgray:lightgray" ]
 //	L5	->	RVN	[ color="lightgray:lightgray:lightgray" ]
 
 	/* Phase 2 Group stage 1 - Round 1 */
@@ -66,11 +66,12 @@ digraph KR {
 	RRR	->	RVN	[ color="black:black:black" ]
 	MVPB	->	MVPM	[ color="black:gray:black" ]
 
+	/* Phase 2 Group stage 1 - Round 5 */
+	L5	->	MTY	[ color="black:gray:black" ]
+	TP	->	RRR	[ color="black:black:black" ]
+	MVPB	->	RVN	[ color="black:black:black" ]
+	BLS	->	MVPM	[ color="black:gray:black" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Phase 2 Group stage 1 - Round 5 */
-	MTY	->	L5
-	TP	->	RRR
-	MVPB	->	RVN
-	BLS	->	MVPM
 }
