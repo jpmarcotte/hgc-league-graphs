@@ -9,4 +9,6 @@ do
 			echo "dot -Tpng \"$f\" -o \"$o\""
 			dot -Tpng "$f" -o "$o"
 	fi
+
+	`open renders`
 done

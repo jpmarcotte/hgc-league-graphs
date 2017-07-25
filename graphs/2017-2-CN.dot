@@ -54,7 +54,8 @@ digraph CN {
 	CE	->	SOA	[ color="black:black" ]
 	SPT	->	RPG	[ color="black:black" ]
 	eStar	->	WKG	[ color="black:black" ]
-	HL	->	KT	[ /*color="black:black"*/ color="red:red" constraint="false" ]
+//	HL	->	KT	[ /*color="black:black"*/ color="red:red" constraint="false" ]
+	HL	->	KT	[ color="black:black" /*color="red:red" constraint="false"*/ ]
 
 	/* Stage 1 Part 1 - Round 3 */
 	HL	->	WKG	[ color="black:black" ]
@@ -82,6 +83,20 @@ digraph CN {
 	CE	->	WKG	[ color="blue:blue" ]
 	eStar	->	SPT	[ color="blue:gray" dir="none" constraint="false" ]
 
+	/* Stage 1 Part 2 - Round 3 */
+	eStar	->	HL	[ color="blue:gray" dir="none" constraint="false" ]
+	RPG	->	WKG	[ color="blue:gray" dir="none" constraint="false" ]
+	SPT	->	SOA	[ color="blue:blue" ]
+	CE	->	KT	[ color="blue:blue" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
+	SOA	->	CE
+	SPT	->	RPG
+	eStar	->	WKG
+	HL	->	KT
+	HL	->	WKG
+	eStar	->	SOA
+	RPG	->	KT
+	SPT	->	CE
 }
