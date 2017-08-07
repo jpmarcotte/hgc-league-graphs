@@ -1,0 +1,136 @@
+digraph WesternClash {
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
+	imagepath="logos/";
+
+	NOM	[image="nomia.png"]
+	RDC	[image="red-canids.png"]
+
+	subgraph clusterNA {
+		GFE	[ image="gale-force-esports.png" ];
+		NT	[ image="no-tomorrow.png" ];
+		TS	[ image="tempo-storm.png" style=filled fillcolor=blue ];
+		TF	[ image="team-freedom.png" ];
+		R2E	[ image="roll20.png" ];
+		SSS	[ image="superstars.png" ];
+		NVT	[ image="naventic.png" ];
+		EID	[ image="even-in-death.png" ];
+
+		/* Phase 2 Group stage 1 - Round 1 */
+		NT	->	SSS	[ color="black:gray:black" ]
+		TF	->	EID	[ color="black:black:black" ]
+		NT	->	TF	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
+		GFE	->	NVT	[ color="black:gray:black" ]
+		GFE	->	R2E	[ color="gray:black:gray" ]
+		TS	->	EID	[ color="black:black:black" ]
+
+		/* Phase 2 Group stage 1 - Round 2 */
+		GFE	->	TS	[ color="gray:black:gray" ]
+		R2E	->	NVT	[ color="black:gray:black" ]
+		SSS	->	EID	[ color="black:gray:black" ]
+		TF	->	NVT	[ color="black:black:black" ]
+		NT	->	TS	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
+		R2E	->	SSS	[ color="black:gray:black" ]
+
+		/* Phase 2 Group stage 1 - Round 3 */
+		GFE	->	NT	[ color="gray:black:gray" ]
+		TF	->	SSS	[ color="black:black:black" ]
+		TS	->	NVT	[ color="black:black:black" ]
+		R2E	->	EID	[ color="black:black:black" ]
+		TF	->	GFE	[ color="black:gray:black" ]
+		TS	->	SSS	[ color="black:gray:black" ]
+
+		/* Phase 2 Group stage 1 - Round 4 */
+		NT	->	NVT	[ color="black:gray:black" ]
+		TF	->	R2E	[ color="gray:black:gray" ]
+		TS	->	R2E	[ color="black:gray:black" ]
+		GFE	->	EID	[ color="black:gray:black" ]
+		EID	->	NT	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
+		SSS	->	NVT	[ color="black:gray:black" ]
+
+		/* Phase 2 Group stage 1 - Round 5 */
+		R2E	->	NT	[ color="black:black:black" ]
+		GFE	->	SSS	[ color="black:black:black" ]
+		NVT	->	EID	[ color="black:gray:black" ]
+		TS	->	TF	[ color="gray:black:gray" ]
+
+	}
+
+	subgraph clusterEU {
+		TL	[ image="liquid.png" style="filled" fillcolor="blue" ];
+		FNC	[ image="fnatic.png" ];
+		TRC	[ image="tricked.png" ];
+		PD	[ image="playing-ducks.png" ];
+		EXP	[ image="expert.png" ];
+		DIG	[ image="dignitas.png" ];
+		ZE	[ image="zealots.png" ];
+		TGG	[ image="team-good-guys.png" ];
+
+		/* Phase 2 Group stage 1 - Round 1 */
+		TRC	->	EXP	[ color="gray:black:gray" ]
+		ZE	->	PD	[ color="black:black:black" ]
+		PD	->	TRC	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
+		TL	->	TGG	[ color="black:black:black" ]
+		FNC	->	ZE	[ color="black:black:black" ]
+		TL	->	DIG	[ color="black:black:black" ]
+
+		/* Phase 2 Group stage 1 - Round 2 */
+		FNC	->	TL	[ color="gray:black:gray" ]
+		DIG	->	TGG	[ color="gray:black:gray" ]
+		EXP	->	ZE	[ color="black:black:black" ]
+		TGG	->	PD	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
+		FNC	->	TRC	[ color="black:black:black" ]
+		EXP	->	DIG	[ color="gray:black:gray" ]
+
+		/* Phase 2 Group stage 1 - Round 3 */
+		TRC	->	TL	[ color="black:black:black" ]
+		EXP	->	PD	[ color="black:black:black" ]
+		FNC	->	TGG	[ color="black:gray:black" ]
+		DIG	->	ZE	[ color="black:black:black" ]
+		TL	->	PD	[ color="black:black:black" ]
+		FNC	->	EXP	[ color="black:black:black" ]
+
+		/* Phase 2 Group stage 1 - Round 4 */
+		TRC	->	TGG	[ color="black:black:black" ]
+		DIG	->	PD	[ color="black:black:black" ]
+		FNC	->	DIG	[ color="black:black:black" ]
+		ZE	->	TL	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
+		TRC	->	ZE	[ color="black:black:black" ]
+		EXP	->	TGG	[ color="black:black:black" ]
+
+		/* Phase 2 Group stage 1 - Round 5 */
+		DIG	->	TRC	[ color="black:black:black" ]
+		TL	->	EXP	[ color="gray:black:gray" ]
+		ZE	->	TGG	[ color="gray:black:gray" ]
+		PD	->	FNC	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
+
+	}
+
+	/* Western Clash */
+
+	/* 1/4 Final Winner's Bracket */
+	FNC ->	RDC	[ color="blue:blue" ]
+	TL	->	TS	[ color="blue:blue" ]
+	EXP	->	TF	[ color="blue:blue" ]
+	GFE	->	NOM	[ color="blue:blue" ]
+
+	/* 1/8 Final Loser's Bracket */
+	TS	->	RDC	[ color="blue:blue" ]
+	TF	->	NOM	[ color="blue:gray" ]
+
+	/* Semifinal Winner's Bracket */
+	FNC	->	TL	[ color="blue:blue:blue" ]
+	EXP	->	GFE	[ color="blue:gray:blue" ]
+
+	/* Quarterfinal Loser's Bracket */
+	TL	->	TF	[ color="gray:blue:gray" ]
+	GFE	->	TS	[ color="gray:blue:gray" ]
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+	/* Winner's Bracket Finals */
+	FNC	->	EXP
+
+	/* Semifinals Loser's Bracket */
+	TL	->	GFE
+
+}

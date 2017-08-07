@@ -39,7 +39,7 @@ digraph EU {
 	FNC	->	TL	[ color="gray:black:gray" ]
 	DIG	->	TGG	[ color="gray:black:gray" ]
 	EXP	->	ZE	[ color="black:black:black" ]
-	TGG	->	PD	[ color="gray:black:gray" ]
+	TGG	->	PD	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
 	FNC	->	TRC	[ color="black:black:black" ]
 	EXP	->	DIG	[ color="gray:black:gray" ]
 
@@ -63,7 +63,7 @@ digraph EU {
 	DIG	->	TRC	[ color="black:black:black" ]
 	TL	->	EXP	[ color="gray:black:gray" ]
 	ZE	->	TGG	[ color="gray:black:gray" ]
-	PD	->	FNC	[ color="black:gray:black" ]
+	PD	->	FNC	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 

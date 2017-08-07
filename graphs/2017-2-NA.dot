@@ -46,7 +46,7 @@ digraph NA {
 	R2E	->	NVT	[ color="black:gray:black" ]
 	SSS	->	EID	[ color="black:gray:black" ]
 	TF	->	NVT	[ color="black:black:black" ]
-	NT	->	TS	[ color="gray:black:gray" ]
+	NT	->	TS	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
 	R2E	->	SSS	[ color="black:gray:black" ]
 
 	/* Phase 2 Group stage 1 - Round 3 */
