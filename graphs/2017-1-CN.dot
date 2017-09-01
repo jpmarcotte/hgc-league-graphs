@@ -15,7 +15,7 @@ digraph CN {
 	/*** Eastern Clash ***/
 	node [ width="0.25" ]
 	RSG	[ image="resurgence.png" ]
-	TFC	[ image="tfc.png" ]
+	TFC	[ image="team-face-check.png" ]
 	L5	[ image="l5.png" ]
 	MVPB	[ image="mvp-black.png" ]
 	TP	[ image="tempest.png" ]

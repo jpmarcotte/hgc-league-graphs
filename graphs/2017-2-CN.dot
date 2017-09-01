@@ -64,39 +64,39 @@ digraph CN {
 	SPT	->	CE	[ color="black:black" ]
 
 	/* Stage 1 Part 2 - Round 1 */
-	KT	->	WKG	[ color="blue:blue" ]
-	SOA	->	RPG	[ color="blue:gray" dir="none" constraint="false" ]
-	eStar	->	CE	[ color="blue:gray" dir="none" constraint="false" ]
-	SPT	->	HL	[ color="blue:blue" ]
+	KT	->	WKG	[ color="green:green" ]
+	SOA	->	RPG	[ color="green:gray" dir="none" constraint="false" ]
+	eStar	->	CE	[ color="green:gray" dir="none" constraint="false" ]
+	SPT	->	HL	[ color="green:green" ]
 
 	/* Stage 1 Part 2 - Round 2 */
-	SPT	->	WKG	[ color="blue:blue" ]
-	HL	->	SOA	[ color="blue:gray" dir="none" constraint="false" ]
-	eStar	->	KT	[ color="blue:blue" ]
-	CE	->	RPG	[ color="blue:blue" ]
-	SPT	->	KT	[ color="blue:blue" ]
-	eStar	->	RPG	[ color="blue:blue" ]
-	CE	->	HL	[ color="blue:blue" ]
-	SOA	->	WKG	[ color="blue:blue" ]
-	RPG	->	HL	[ color="blue:blue" ]
-	KT	->	SOA	[ color="blue:blue" ]
-	CE	->	WKG	[ color="blue:blue" ]
-	eStar	->	SPT	[ color="blue:gray" dir="none" constraint="false" ]
+	SPT	->	WKG	[ color="green:green" ]
+	HL	->	SOA	[ color="green:gray" dir="none" constraint="false" ]
+	eStar	->	KT	[ color="green:green" ]
+	CE	->	RPG	[ color="green:green" ]
+	SPT	->	KT	[ color="green:green" ]
+	eStar	->	RPG	[ color="green:green" ]
+	CE	->	HL	[ color="green:green" ]
+	SOA	->	WKG	[ color="green:green" ]
+	RPG	->	HL	[ color="green:green" ]
+	KT	->	SOA	[ color="green:green" ]
+	CE	->	WKG	[ color="green:green" ]
+	eStar	->	SPT	[ color="green:gray" dir="none" constraint="false" ]
 
 	/* Stage 1 Part 2 - Round 3 */
-	eStar	->	HL	[ color="blue:gray" dir="none" constraint="false" ]
-	RPG	->	WKG	[ color="blue:gray" dir="none" constraint="false" ]
-	SPT	->	SOA	[ color="blue:blue" ]
-	CE	->	KT	[ color="blue:blue" ]
+	eStar	->	HL	[ color="green:gray" dir="none" constraint="false" ]
+	RPG	->	WKG	[ color="green:gray" dir="none" constraint="false" ]
+	SPT	->	SOA	[ color="green:green" ]
+	CE	->	KT	[ color="green:green" ]
+	CE	->	SOA	[ color="green:green" ]
+	SPT	->	RPG	[ color="green:gray" dir="none" constraint="false" ]
+	eStar	->	WKG	[ color="green:green" ]
+	HL	->	KT	[ color="green:green" ]
+	HL	->	WKG	[ color="green:green" ]
+	eStar	->	SOA	[ color="green:green" ]
+	RPG	->	KT	[ color="green:green" ]
+	SPT	->	CE	[ color="green:green" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	SOA	->	CE
-	SPT	->	RPG
-	eStar	->	WKG
-	HL	->	KT
-	HL	->	WKG
-	eStar	->	SOA
-	RPG	->	KT
-	SPT	->	CE
 }

@@ -1,0 +1,191 @@
+// vim: set ts=5 sw=5:
+digraph EasternClash {
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
+	imagepath="logos/";
+	
+	DK	[ image="deadly-kittens.png" ]
+	ST	[ image="soul-torturers.png" ]
+	TFC	[ image="team-face-check.png" ]
+
+	subgraph CN {
+		CE	[ image="ce.png" ]
+		eStar	[ image="estar-gaming.png" ]
+		RPG	[ image="rpg.png" ]
+		SOA	[ image="start-over-again.png" ]
+		HL	[ image="hots-lady.png" ]
+		SPT	[ image="super-perfect-team.png" ]
+		KT	[ image="kt.png" style="filled" color="gray" ]
+		WKG	[ image="wkg.png" ]
+
+		/* Phase 1 Aggregates */
+	//	CE	->	eStar	[ color="lightgray:lightgray:lightgray" ]
+	//	CE	->	RPG	[ color="lightgray:lightgray" ]
+	//	CE	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+	//	CE	->	HL	[ color="lightgray:lightgray:lightgray" ]
+	//	SPT	->	CE	[ color="lightgray" ]
+	//	eStar	->	RPG	[ color="lightgray:lightgray:lightgray" ]
+	//	eStar	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+	//	eStar	->	HL	[ color="lightgray:lightgray:lightgray" ]
+	//	eStar	->	SPT	[ color="lightgray:lightgray" ]
+	//	RPG	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+	//	HL	->	RPG	[ color="lightgray:lightgray" ]
+	//	SPT	->	RPG	[ color="lightgray:lightgray:lightgray" ]
+	//	HL	->	SOA	[ color="lightgray:lightgray:lightgray" ]
+	//	SPT	->	SOA	[ color="lightgray:lightgray" ]
+	//	SPT	->	HL	[ color="lightgray:lightgray" ]
+		
+		/* State 1 Part 1 - Round 1 */
+		KT	->	WKG	[ color="black:black" ]
+		RPG	->	SOA	[ color="black:black" ]
+		eStar	->	CE	[ color="black:gray" dir="none" constraint="false" ]
+		SPT	->	HL	[ color="black:gray" dir="none" constraint="false" ]
+		SPT	->	WKG	[ color="black:black" ]
+		HL	->	SOA	[ color="black:gray" dir="none" constraint="false" ]
+		eStar	->	KT	[ color="black:black" ]
+		CE	->	RPG	[ color="black:black" ]
+		SPT	->	KT	[ color="black:black" ]
+		eStar	->	RPG	[ color="black:black" ]
+		CE	->	HL	[ color="black:black" ]
+		SOA	->	WKG	[ color="black:black" ]
+
+		/* Stage 1 Part 1 - Round 2 */
+		HL	->	RPG	[ color="black:gray" dir="none" constraint="false" ]
+		SOA	->	KT	[ color="black:gray" dir="none" constraint="false" ]
+		CE	->	WKG	[ color="black:black" ]
+		SPT	->	eStar	[ color="black:black" ]
+		eStar	->	HL	[ color="black:black" ]
+		RPG	->	WKG	[ color="black:black" ]
+		SPT	->	SOA	[ color="black:black" ]
+		CE	->	KT	[ color="black:black" ]
+		CE	->	SOA	[ color="black:black" ]
+		SPT	->	RPG	[ color="black:black" ]
+		eStar	->	WKG	[ color="black:black" ]
+	//	HL	->	KT	[ /*color="black:black"*/ color="red:red" constraint="false" ]
+		HL	->	KT	[ color="black:black" /*color="red:red" constraint="false"*/ ]
+
+		/* Stage 1 Part 1 - Round 3 */
+		HL	->	WKG	[ color="black:black" ]
+		eStar	->	SOA	[ color="black:black" ]
+		RPG	->	KT	[ color="black:black" ]
+		SPT	->	CE	[ color="black:black" ]
+
+		/* Stage 1 Part 2 - Round 1 */
+		KT	->	WKG	[ color="green:green" ]
+		SOA	->	RPG	[ color="green:gray" dir="none" constraint="false" ]
+		eStar	->	CE	[ color="green:gray" dir="none" constraint="false" ]
+		SPT	->	HL	[ color="green:green" ]
+
+		/* Stage 1 Part 2 - Round 2 */
+		SPT	->	WKG	[ color="green:green" ]
+		HL	->	SOA	[ color="green:gray" dir="none" constraint="false" ]
+		eStar	->	KT	[ color="green:green" ]
+		CE	->	RPG	[ color="green:green" ]
+		SPT	->	KT	[ color="green:green" ]
+		eStar	->	RPG	[ color="green:green" ]
+		CE	->	HL	[ color="green:green" ]
+		SOA	->	WKG	[ color="green:green" ]
+		RPG	->	HL	[ color="green:green" ]
+		KT	->	SOA	[ color="green:green" ]
+		CE	->	WKG	[ color="green:green" ]
+		eStar	->	SPT	[ color="green:gray" dir="none" constraint="false" ]
+
+		/* Stage 1 Part 2 - Round 3 */
+		eStar	->	HL	[ color="green:gray" dir="none" constraint="false" ]
+		RPG	->	WKG	[ color="green:gray" dir="none" constraint="false" ]
+		SPT	->	SOA	[ color="green:green" ]
+		CE	->	KT	[ color="green:green" ]
+		CE	->	SOA	[ color="green:green" ]
+		SPT	->	RPG	[ color="green:gray" dir="none" constraint="false" ]
+		eStar	->	WKG	[ color="green:green" ]
+		HL	->	KT	[ color="green:green" ]
+		HL	->	WKG	[ color="green:green" ]
+		eStar	->	SOA	[ color="green:green" ]
+		RPG	->	KT	[ color="green:green" ]
+		SPT	->	CE	[ color="green:green" ]
+	}
+
+	subgraph KR {
+		MVPM	[ image="mvp-miracle.png" ]
+		MTY	[ image="mighty.png" ]
+		TP	[ image="tempest.png" ]
+		BLS	[ image="blossom.png" ]
+		MVPB	[ image="mvp-black.png" ]
+		L5	[ image="l5.png" ]
+		RVN	[ image="raven.png" ]
+		RRR	[ image="rrr.png" style="filled" fillcolor="black" ]
+
+		/* Phase 1 Aggregates */
+	//	MVPM	->	MTY	[ color="lightgray:lightgray" ]
+	//	TP	->	MVPM	[ color="lightgray" ]
+	//	MVPM	->	BLS	[ color="lightgray:lightgray" ]
+	//	MVPB	->	MVPM	[ color="lightgray:lightgray:lightgray" ]
+	//	L5	->	MVPM	[ color="lightgray:lightgray" ]
+	//	MVPM	->	RVN	[ color="lightgray:lightgray" ]
+	//	MTY	->	TP	[ color="lightgray" ]
+	//	MTY	->	BLS	[ color="lightgray:lightgray" ]
+	//	MVPB	->	MTY	[ color="lightgray:lightgray:lightgray" ]
+	//	L5	->	MTY	[ color="lightgray:lightgray:lightgray" ]
+	//	MTY	->	RVN	[ color="lightgray:lightgray:lightgray" ]
+	//	TP	->	BLS	[ color="lightgray:lightgray:lightgray" ]
+	//	MVPB	->	TP	[ color="lightgray:lightgray" ]
+	//	L5	->	TP	[ color="lightgray:lightgray" ]
+	//	TP	->	RVN	[ color="lightgray" ]
+	//	MVPB	->	BLS	[ color="lightgray:lightgray:lightgray" ]
+	//	L5	->	BLS	[ color="lightgray:lightgray:lightgray" ]
+	//	BLS	->	RVN	[ color="lightgray:lightgray:lightgray" ]
+	//	L5	->	MVPB	[ color="lightgray" ]
+	//	MVPB	->	RVN	[ color="lightgray:lightgray:lightgray" ]
+	//	L5	->	RVN	[ color="lightgray:lightgray:lightgray" ]
+
+		/* Phase 2 Group stage 1 - Round 1 */
+		MTY	->	RRR	[ color="black:black:black" ]
+		BLS	->	RVN	[ color="black:black:black" ]
+		TP	->	BLS	[ color="black:black:black" ]
+		MVPM	->	RRR	[ color="black:black:black" ]
+		MTY	->	MVPM	[ color="gray:black:gray" ]
+		TP	->	RVN	[ color="black:gray:black" ]
+
+		/* Phase 2 Group stage 1 - Round 2 */
+		MVPB	->	BLS	[ color="black:gray:black" ]
+		L5	->	TP	[ color="gray:black:gray" ]
+		TP	->	MVPM	[ color="black:black:black" ]
+		MTY	->	RVN	[ color="black:black:black" ]
+		BLS	->	RRR	[ color="black:gray:black" ]
+		MVPB	->	L5	[ color="black:black:black" ]
+
+		/* Phase 2 Group stage 1 - Round 3 */
+		MVPM	->	RVN	[ color="black:gray:black" ]
+		MVPB	->	RRR	[ color="black:black:black" ]
+		MVPB	->	MTY	[ color="black:gray:black" ]
+		L5	->	RRR	[ color="black:black:black" ]
+		L5	->	BLS	[ color="black:black:black" ]
+		TP	->	MTY	[ color="black:gray:black" ]
+
+		/* Phase 2 Group stage 1 - Round 4 */
+		MVPB	->	TP	[ color="black:black:black" ]
+		L5	->	MVPM	[ color="black:gray:black" ]
+		L5	->	RVN	[ color="black:black:black" ]
+		MTY	->	BLS	[ color="black:gray:black" ]
+		RRR	->	RVN	[ color="black:black:black" ]
+		MVPB	->	MVPM	[ color="black:gray:black" ]
+
+		/* Phase 2 Group stage 1 - Round 5 */
+		L5	->	MTY	[ color="black:gray:black" ]
+		TP	->	RRR	[ color="black:black:black" ]
+		MVPB	->	RVN	[ color="black:black:black" ]
+		BLS	->	MVPM	[ color="black:gray:black" ]
+
+	}
+
+	/* Eastern Clash */
+
+	/* Quarterfinals Winner's Bracket */
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+	MVPB	->	DK
+	TP	->	CE
+	SPT	->	TFC
+	L5	->	ST
+	
+}

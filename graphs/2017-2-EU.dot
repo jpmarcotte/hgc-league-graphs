@@ -65,6 +65,22 @@ digraph EU {
 	ZE	->	TGG	[ color="gray:black:gray" ]
 	PD	->	FNC	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
 
+	/* Phase 2 Group stage 2 - Round 1 */
+	TRC	->	TGG	[ color="blue:gray:blue" ]
+	DIG	->	PD	[ color="gray:blue:gray" ]
+	FNC	->	DIG	[ color="gray:blue:gray" ]
+	ZE	->	TRC	[ color="gray:blue:gray" ]
+	ZE	->	TL	[ color="blue:blue:blue" ]
+	TGG	->	EXP	[ color="gray:blue:gray" ]
+	
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+	/* Phase 2 Group stage 2 - Round 2 */
+	TL	->	FNC
+	DIG	->	TGG
+	EXP	->	ZE
+	PD	->	TGG
+	FNC	->	TRC
+	DIG	->	EXP
 
 }

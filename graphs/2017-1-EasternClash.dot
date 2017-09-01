@@ -56,7 +56,7 @@ digraph East {
 		SPT	[ image="super-perfect-team.png" ]
 		Zero	[ image="zero.png" ]
 		RSG	[ image="resurgence.png" ]
-		TFC	[ image="tfc.png" ]
+		TFC	[ image="team-face-check.png" ]
 	}
 
 	/*** Eastern Clash ***/

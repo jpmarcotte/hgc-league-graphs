@@ -2,75 +2,87 @@ digraph NA {
 	node [shape=circle fixedsize=true width=.75 label="" color="white"];
 	imagepath="logos/";
 	GFE	[ image="gale-force-esports.png" ];
-	NT	[ image="no-tomorrow.png" ];
+	SSG	[ image="space-station-gaming.png" ];
 	TS	[ image="tempo-storm.png" style=filled fillcolor=blue ];
 	TF	[ image="team-freedom.png" ];
 	R2E	[ image="roll20.png" ];
 	SSS	[ image="superstars.png" ];
-	NVT	[ image="naventic.png" ];
+	LF	[ image="lag-force.png" ];
 	EID	[ image="even-in-death.png" ];
 
 	/* Phase 1 Aggregates */
-//	GFE	->	NT	[ color="lightgray:lightgray" ]
+//	GFE	->	SSG	[ color="lightgray:lightgray" ]
 //	GFE	->	TS	[ color="lightgray" ]
 //	GFE	->	TF	[ color="lightgray:lightgray" ]
 //	R2E	->	GFE	[ color="lightgray" ]
 //	GFE	->	SSS	[ color="lightgray:lightgray:lightgray" ]
-//	GFE	->	NVT	[ color="lightgray:lightgray:lightgray" ]
-//	TS	->	NT	[ color="lightgray:lightgray:lightgray" ]
-//	TF	->	NT	[ color="lightgray" ]
-//	R2E	->	NT	[ color="lightgray:lightgray" ]
-//	SSS	->	NT	[ color="lightgray:lightgray" ]
-//	NT	->	NVT	[ color="lightgray" ]
+//	GFE	->	LF	[ color="lightgray:lightgray:lightgray" ]
+//	TS	->	SSG	[ color="lightgray:lightgray:lightgray" ]
+//	TF	->	SSG	[ color="lightgray" ]
+//	R2E	->	SSG	[ color="lightgray:lightgray" ]
+//	SSS	->	SSG	[ color="lightgray:lightgray" ]
+//	SSG	->	LF	[ color="lightgray" ]
 //	TS	->	TF	[ color="lightgray:lightgray" constraint="false" ]
 //	TS	->	R2E	[ color="lightgray" ]
 //	TS	->	SSS	[ color="lightgray:lightgray" ]
-//	TS	->	NVT	[ color="lightgray" ]
+//	TS	->	LF	[ color="lightgray" ]
 //	R2E	->	TF	[ color="lightgray:lightgray:lightgray" ]
 //	TF	->	SSS	[ color="lightgray" ]
-//	TF	->	NVT	[ color="lightgray:lightgray:lightgray" ]
+//	TF	->	LF	[ color="lightgray:lightgray:lightgray" ]
 //	R2E	->	SSS	[ color="lightgray:lightgray:lightgray" ]
-//	R2E	->	NVT	[ color="lightgray:lightgray:lightgray" ]
-//	SSS	->	NVT	[ color="lightgray:lightgray" ]
+//	R2E	->	LF	[ color="lightgray:lightgray:lightgray" ]
+//	SSS	->	LF	[ color="lightgray:lightgray" ]
 
 	/* Phase 2 Group stage 1 - Round 1 */
-	NT	->	SSS	[ color="black:gray:black" ]
+	SSG	->	SSS	[ color="black:gray:black" ]
 	TF	->	EID	[ color="black:black:black" ]
-	NT	->	TF	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
-	GFE	->	NVT	[ color="black:gray:black" ]
+	SSG	->	TF	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
+	GFE	->	LF	[ color="black:gray:black" ]
 	GFE	->	R2E	[ color="gray:black:gray" ]
 	TS	->	EID	[ color="black:black:black" ]
 
 	/* Phase 2 Group stage 1 - Round 2 */
 	GFE	->	TS	[ color="gray:black:gray" ]
-	R2E	->	NVT	[ color="black:gray:black" ]
+	R2E	->	LF	[ color="black:gray:black" ]
 	SSS	->	EID	[ color="black:gray:black" ]
-	TF	->	NVT	[ color="black:black:black" ]
-	NT	->	TS	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
+	TF	->	LF	[ color="black:black:black" ]
+	SSG	->	TS	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
 	R2E	->	SSS	[ color="black:gray:black" ]
 
 	/* Phase 2 Group stage 1 - Round 3 */
-	GFE	->	NT	[ color="gray:black:gray" ]
+	GFE	->	SSG	[ color="gray:black:gray" ]
 	TF	->	SSS	[ color="black:black:black" ]
-	TS	->	NVT	[ color="black:black:black" ]
+	TS	->	LF	[ color="black:black:black" ]
 	R2E	->	EID	[ color="black:black:black" ]
 	TF	->	GFE	[ color="black:gray:black" ]
 	TS	->	SSS	[ color="black:gray:black" ]
 
 	/* Phase 2 Group stage 1 - Round 4 */
-	NT	->	NVT	[ color="black:gray:black" ]
+	SSG	->	LF	[ color="black:gray:black" ]
 	TF	->	R2E	[ color="gray:black:gray" ]
 	TS	->	R2E	[ color="black:gray:black" ]
 	GFE	->	EID	[ color="black:gray:black" ]
-	EID	->	NT	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
-	SSS	->	NVT	[ color="black:gray:black" ]
+	EID	->	SSG	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
+	SSS	->	LF	[ color="black:gray:black" ]
 
 	/* Phase 2 Group stage 1 - Round 5 */
-	R2E	->	NT	[ color="black:black:black" ]
+	R2E	->	SSG	[ color="black:black:black" ]
 	GFE	->	SSS	[ color="black:black:black" ]
-	NVT	->	EID	[ color="black:gray:black" ]
+	LF	->	EID	[ color="black:gray:black" ]
 	TS	->	TF	[ color="gray:black:gray" ]
 
+	/* Phase 2 Group stage 2 - Round 1 */
+	LF	->	SSG	[ color="blue:gray:blue" ]
+	R2E	->	TF	[ color="blue:blue:blue" ]
+	R2E	->	TS	[ color="blue:blue:blue" ]
+	GFE	->	EID	[ color="blue:blue:blue" ]
+	SSG	->	EID	[ color="blue:blue:blue" ]
+	LF	->	SSS	[ color="gray:blue:gray" ]	
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
-	
+
+	TS	->	GFE
+	R2E	->	LF
+	SSS	->	EID
+	TF	->	LF
 }
