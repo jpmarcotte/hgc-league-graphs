@@ -85,4 +85,6 @@ digraph NA {
 	R2E	->	LF
 	SSS	->	EID
 	TF	->	LF
+	TS	->	SSG
+	SSS	->	R2E
 }
