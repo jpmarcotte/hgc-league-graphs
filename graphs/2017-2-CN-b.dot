@@ -1,0 +1,62 @@
+// vim: set ts=5 sw=5:
+digraph CN {
+	node [shape=circle fixedsize=true width=.75 label="" color="white"];
+	imagepath="logos/";
+	CE	[ image="ce.png" ]
+	RPG	[ image="rpg.png" ]
+	SoA	[ image="start-over-again.png" ]
+	HL	[ image="hots-lady.png" ]
+	SPT	[ image="super-perfect-team.png" ]
+	KT	[ image="kt.png" style="filled" color="gray" ]
+	BTG	[ image="beyond-the-game.png" ]
+	ONE	[ image="the-one.png" ]
+
+	/* Phase 1 Aggregates */
+	CE	->	RPG	[ color="lightgray:lightgray" ]
+	CE	->	SoA	[ color="lightgray:lightgray" ]
+	CE	->	HL	[ color="lightgray:lightgray" ]
+	SPT	->	CE	[ color="lightgray:lightgray" ]
+	CE	->	KT	[ color="lightgray:lightgray" ]
+	RPG	->	SoA	[ color="lightgray" ]
+	RPG	->	HL	[ color="lightgray" ]
+	SPT	->	RPG	[ color="lightgray" ]
+	RPG	->	KT	[ color="lightgray:lightgray" ]
+	SOA	->	HL	[ color="lightgray" dir="none" constraint="false" ]
+	SPT	->	SoA	[ color="lightgray:lightgray" ]
+	KT	->	SoA	[ color="lightgray" ]
+	SPT	->	HL	[ color="lightgray" ]
+	HL	->	KT	[ color="lightgray:lightgray" ]
+	SPT	->	KT	[ color="lightgray:lightgray" ]
+	
+	/* Stage 2 Part 2 - Round 1 */
+	KT	->	BTG	[ color="black:gray" dir="none" constraint="false" ]
+	SoA	->	RPG	[ color="black:gray" dir="none" constraint="false" ]
+	CE	->	ONE	[ color="black:gray" dir="none" constraint="false" ]
+	SPT	->	HL	[ color="black:gray" dir="none" constraint="false" ]
+	HL	->	RPG	[ color="black:gray" dir="none" constraint="false" ]
+	SoA	->	KT	[ color="black:black" ]
+	CE	->	BTG	[ color="black:gray" dir="none" constraint="false" ]
+	SPT	->	ONE	[ color="black:black" ]
+	HL	->	ONE	[ color="black:gray" dir="none" constraint="false" ]
+	CE	->	KT	[ color="black:gray" dir="none" constraint="false" ]
+	SPT	->	SoA	[ color="black:gray" dir="none" constraint="false" ]
+	BTG	->	RPG	[ color="black:gray" dir="none" constraint="false" ]
+
+	/* Stage 2 Part 2 - Round 2 */
+	SPT	->	KT	[ color="black:black" ]
+	ONE	->	RPG	[ color="black:black" ]
+	CE	->	HL	[ color="black:black" ]
+	SoA	->	BTG	[ color="black:gray" dir="none" constraint="false" ]	
+
+	edge [ color="gray" dir="none" constraint="false" style="dashed"]
+
+	SoA	->	CE
+	SPT	->	RPG
+	BTG	->	ONE
+	HL	->	KT
+	SPT	->	BTG
+	CE	->	RPG
+	KT	->	ONE
+	HL	->	SoA
+
+}
