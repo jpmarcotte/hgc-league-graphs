@@ -33,7 +33,7 @@ digraph EU {
 	PD	->	TRC	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
 	TL	->	TGG	[ color="black:black:black" ]
 	FNC	->	ZE	[ color="black:black:black" ]
-	TL	->	DIG	[ color="black:black:black" ]
+	TL	->	DIG	[ /*color="black:black:black"*/ color="red:red:red" constraint="false" ]
 
 	/* Phase 2 Group stage 1 - Round 2 */
 	FNC	->	TL	[ color="gray:black:gray" ]
@@ -41,7 +41,7 @@ digraph EU {
 	EXP	->	ZE	[ color="black:black:black" ]
 	TGG	->	PD	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
 	FNC	->	TRC	[ color="black:black:black" ]
-	EXP	->	DIG	[ color="gray:black:gray" ]
+	EXP	->	DIG	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
 
 	/* Phase 2 Group stage 1 - Round 3 */
 	TRC	->	TL	[ color="black:black:black" ]
@@ -55,32 +55,40 @@ digraph EU {
 	TRC	->	TGG	[ color="black:black:black" ]
 	DIG	->	PD	[ color="black:black:black" ]
 	FNC	->	DIG	[ color="black:black:black" ]
-	ZE	->	TL	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
+	ZE	->	TL	[ color="black:gray:black" ]
 	TRC	->	ZE	[ color="black:black:black" ]
 	EXP	->	TGG	[ color="black:black:black" ]
 
 	/* Phase 2 Group stage 1 - Round 5 */
 	DIG	->	TRC	[ color="black:black:black" ]
-	TL	->	EXP	[ color="gray:black:gray" ]
+	TL	->	EXP	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
 	ZE	->	TGG	[ color="gray:black:gray" ]
 	PD	->	FNC	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
 
 	/* Phase 2 Group stage 2 - Round 1 */
-	TRC	->	TGG	[ color="blue:gray:blue" ]
-	DIG	->	PD	[ color="gray:blue:gray" ]
-	FNC	->	DIG	[ color="gray:blue:gray" ]
-	ZE	->	TRC	[ color="gray:blue:gray" ]
-	ZE	->	TL	[ color="blue:blue:blue" ]
-	TGG	->	EXP	[ color="gray:blue:gray" ]
+	TRC	->	TGG	[ color="green:gray:green" ]
+	DIG	->	PD	[ color="gray:green:gray" ]
+	FNC	->	DIG	[ color="gray:green:gray" ]
+	ZE	->	TRC	[ color="gray:green:gray" ]
+	ZE	->	TL	[ color="green:green:green" ]
+	TGG	->	EXP	[ /*color="gray:green:gray"*/ color="gray:red:gray" constraint="false" ]
 	
+	/* Phase 2 Group stage 2 - Round 2 */
+	FNC	->	TL	[ color="green:green:green" ]
+	DIG	->	TGG	[ color="green:green:green" ]
+	EXP	->	ZE	[ color="green:green:green" ]
+	PD	->	TGG	[ color="gray:green:gray" ]
+	FNC	->	TRC	[ color="green:green:green" ]
+	DIG	->	EXP	[ color="gray:green:gray" ]
+
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Phase 2 Group stage 2 - Round 2 */
-	TL	->	FNC
-	DIG	->	TGG
-	EXP	->	ZE
-	PD	->	TGG
-	FNC	->	TRC
-	DIG	->	EXP
+	/* Phase 2 Group stage 2 - Round 3 */
+	TL	->	TRC
+	EXP	->	PD
+	FNC	->	TGG
+	DIG	->	ZE
+	TL	->	PD
+	FNC	->	EXP
 
 }

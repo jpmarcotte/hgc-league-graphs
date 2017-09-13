@@ -73,22 +73,29 @@ digraph KR {
 	BLS	->	MVPM	[ color="black:gray:black" ]
 
 	/* Phase 2 Group stage 2 - Round 1 */
-	L5	->	RRR	[ color="blue:blue:blue" ]
-	TP	->	MTY	[ color="blue:gray:blue" ]
-	BLS	->	RVN	[ color="blue:blue:blue" ]
-	MVPB	->	RRR	[ color="blue:blue:blue" ]
-	MVPB	->	MVPM	[ color="blue:blue:blue" ]
-	TP	->	RVN	[ color="blue:gray:blue" ]
+	L5	->	RRR	[ color="green:green:green" ]
+	TP	->	MTY	[ color="green:gray:green" ]
+	BLS	->	RVN	[ color="green:green:green" ]
+	MVPB	->	RRR	[ color="green:green:green" ]
+	MVPB	->	MVPM	[ color="green:green:green" ]
+	TP	->	RVN	[ color="green:gray:green" ]
+
+	/* Phase 2 Group stage 2 - Round 2 */
+	MTY	->	RVN	[ color="green:green:green" ]
+	L5	->	MVPM	[ color="green:green:green" ]
+	MVPM	->	BLS	[ color="green:green:green" ]
+	MVPB	->	TP	[ color="green:gray:green" ]
+	MTY	->	RRR	[ color="green:gray:green" ]
+	L5	->	BLS	[ color="green:gray:green" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	/* Phase 2 Group stage 2 - Round 2 */
-	MTY	->	RVN
-	L5	->	MVPM
-	MVPM	->	BLS
-	MVPB	->	TP
-	MTY	->	RRR
-	L5	->	BLS
-
+	/* Phase 2 Group stage 2 - Round 3 */
+	MVPB	->	BLS
+	RVN	->	RRR
+	L5	->	TP
+	MVPM	->	MTY
+	TP	->	RRR
+	MTY	->	BLS
 	
 }

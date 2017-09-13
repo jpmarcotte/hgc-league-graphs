@@ -59,8 +59,8 @@ digraph NA {
 
 	/* Phase 2 Group stage 1 - Round 4 */
 	SSG	->	LF	[ color="black:gray:black" ]
-	TF	->	R2E	[ color="gray:black:gray" ]
-	TS	->	R2E	[ color="black:gray:black" ]
+	TF	->	R2E	[ /*color="gray:black:gray"*/ color="gray:red:gray" constraint="false" ]
+	TS	->	R2E	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
 	GFE	->	EID	[ color="black:gray:black" ]
 	EID	->	SSG	[ /*color="black:gray:black"*/ color="red:gray:red" constraint="false" ]
 	SSS	->	LF	[ color="black:gray:black" ]
@@ -72,19 +72,27 @@ digraph NA {
 	TS	->	TF	[ color="gray:black:gray" ]
 
 	/* Phase 2 Group stage 2 - Round 1 */
-	LF	->	SSG	[ color="blue:gray:blue" ]
-	R2E	->	TF	[ color="blue:blue:blue" ]
-	R2E	->	TS	[ color="blue:blue:blue" ]
-	GFE	->	EID	[ color="blue:blue:blue" ]
-	SSG	->	EID	[ color="blue:blue:blue" ]
-	LF	->	SSS	[ color="gray:blue:gray" ]	
+	LF	->	SSG	[ color="green:gray:green" ]
+	R2E	->	TF	[ color="green:green:green" ]
+	R2E	->	TS	[ color="green:green:green" ]
+	GFE	->	EID	[ color="green:green:green" ]
+	SSG	->	EID	[ color="green:green:green" ]
+	LF	->	SSS	[ color="gray:green:gray" ]	
+
+	/* Phase 2 Group stage 2 - Round 2 */
+	GFE	->	TS	[ color="green:gray:green" ]
+	R2E	->	LF	[ color="green:green:green" ]
+	SSS	->	EID	[ color="green:gray:green" ]
+	TF	->	LF	[ color="green:green:green" ]
+	TS	->	SSG	[ color="green:gray:green" ]
+	R2E	->	SSS	[ color="green:green:green" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	TS	->	GFE
-	R2E	->	LF
-	SSS	->	EID
-	TF	->	LF
-	TS	->	SSG
-	SSS	->	R2E
+	/* Phase 2 Group stage 2 - Round 3 */
+	GFE	->	SSS
+	SSS	->	TF
+	TS	->	LF
+	R2E	->	EID
+
 }

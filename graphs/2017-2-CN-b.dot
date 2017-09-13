@@ -11,7 +11,7 @@ digraph CN {
 	BTG	[ image="beyond-the-game.png" ]
 	ONE	[ image="the-one.png" ]
 
-	/* Phase 1 Aggregates */
+	/* Phase 2 Group stage 1  Aggregates */
 	CE	->	RPG	[ color="lightgray:lightgray" ]
 	CE	->	SoA	[ color="lightgray:lightgray" ]
 	CE	->	HL	[ color="lightgray:lightgray" ]
@@ -21,14 +21,14 @@ digraph CN {
 	RPG	->	HL	[ color="lightgray" ]
 	SPT	->	RPG	[ color="lightgray" ]
 	RPG	->	KT	[ color="lightgray:lightgray" ]
-	SOA	->	HL	[ color="lightgray" dir="none" constraint="false" ]
+	SoA	->	HL	[ color="lightgray" dir="none" constraint="false" ]
 	SPT	->	SoA	[ color="lightgray:lightgray" ]
 	KT	->	SoA	[ color="lightgray" ]
 	SPT	->	HL	[ color="lightgray" ]
 	HL	->	KT	[ color="lightgray:lightgray" ]
 	SPT	->	KT	[ color="lightgray:lightgray" ]
 	
-	/* Stage 2 Part 2 - Round 1 */
+	/* Phase 2 Group stage 2 - Round 1 */
 	KT	->	BTG	[ color="black:gray" dir="none" constraint="false" ]
 	SoA	->	RPG	[ color="black:gray" dir="none" constraint="false" ]
 	CE	->	ONE	[ color="black:gray" dir="none" constraint="false" ]
@@ -42,21 +42,30 @@ digraph CN {
 	SPT	->	SoA	[ color="black:gray" dir="none" constraint="false" ]
 	BTG	->	RPG	[ color="black:gray" dir="none" constraint="false" ]
 
-	/* Stage 2 Part 2 - Round 2 */
+	/* Phase 2 Group stage 2 - Round 2 */
 	SPT	->	KT	[ color="black:black" ]
 	ONE	->	RPG	[ color="black:black" ]
 	CE	->	HL	[ color="black:black" ]
 	SoA	->	BTG	[ color="black:gray" dir="none" constraint="false" ]	
+	CE	->	SoA	[ color="black:black" ]
+	SPT	->	RPG	[ color="black:gray" dir="none" constraint="false" ]
+	BTG	->	ONE	[ color="black:black" ]
+	KT	->	HL	[ color="black:black" ]
+	SPT	->	BTG	[ color="black:black" ]
+	CE	->	RPG	[ color="black:black" ]
+	ONE	->	KT	[ color="black:black" ]
+	HL	->	SoA	[ color="black:gray" dir="none" constraint="false" ]
 
 	edge [ color="gray" dir="none" constraint="false" style="dashed"]
 
-	SoA	->	CE
-	SPT	->	RPG
-	BTG	->	ONE
-	HL	->	KT
-	SPT	->	BTG
-	CE	->	RPG
-	KT	->	ONE
-	HL	->	SoA
+	/* Phase 2 Group stage 2 - Round 3 */
+	HL	->	BTG
+	SoA	->	ONE
+	RPG	->	KT
+	SPT	->	CE
+	KT	->	BTG
+	SoA	->	RPG
+	CE	->	ONE
+	SPT	->	HL
 
 }
